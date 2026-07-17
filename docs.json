@@ -2,6 +2,11 @@
   "$schema": "https://mintlify.com/docs.json",
   "name": "HackerRank Documentation",
   "theme": "willow",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "favicon": "/logo/light.svg",
   "colors": {
     "primary": "#00B140",
     "light": "#00D14A",
