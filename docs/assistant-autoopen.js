@@ -10,6 +10,24 @@
   if (typeof window === "undefined") return;
   if (window.location.pathname !== "/") return;
 
+  // Landing mode = pill hero. Chat mode = user has an active question in the URL.
+  var setMode = function () {
+    var mode = /[?&]assistant\b/.test(window.location.search) ? "chat" : "landing";
+    document.documentElement.setAttribute("data-chat-mode", mode);
+  };
+  setMode();
+  window.addEventListener("popstate", setMode);
+  window.addEventListener("hashchange", setMode);
+
+  // When user clicks Mintlify's built-in close button in chat mode, go back to landing.
+  document.addEventListener("click", function (e) {
+    var t = e.target && e.target.closest && e.target.closest('button[aria-label="Close assistant panel"]');
+    if (t && document.documentElement.getAttribute("data-chat-mode") === "chat") {
+      e.preventDefault();
+      window.location.href = "/";
+    }
+  }, true);
+
   var STARTERS = [
     "How do I invite candidates to a test?",
     "How does Proctor Mode work?",

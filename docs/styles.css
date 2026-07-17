@@ -43,10 +43,9 @@ html[data-current-path="/"] main .lg\:flex-1.lg\:min-w-0 {
   display: block !important; flex: none !important; width: 100% !important;
 }
 
-/* Make the assistant sheet a transparent card that only holds the input,
-   floating in the middle of the purple canvas. */
-html[data-current-path="/"] #chat-assistant-sheet,
-html[data-current-path="/"] div:has(> #chat-assistant-sheet) {
+/* LANDING mode: transparent card, only input visible, sits below the hero. */
+html[data-current-path="/"][data-chat-mode="landing"] #chat-assistant-sheet,
+html[data-current-path="/"][data-chat-mode="landing"] div:has(> #chat-assistant-sheet) {
   position: fixed !important;
   top: 260px !important;
   left: 50% !important;
@@ -62,29 +61,79 @@ html[data-current-path="/"] div:has(> #chat-assistant-sheet) {
   z-index: 40 !important;
   overflow: visible !important;
 }
-
-/* Hide the "Assistant" header, disclaimer, close/expand buttons, and the empty
-   messages area — leaving only the input visible on landing. */
-html[data-current-path="/"] .chat-assistant-sheet-header,
-html[data-current-path="/"] .chat-assistant-disclaimer-text,
-html[data-current-path="/"] button[aria-label="Close assistant panel"],
-html[data-current-path="/"] button[aria-label="Maximize assistant panel"] {
+html[data-current-path="/"][data-chat-mode="landing"] .chat-assistant-sheet-header,
+html[data-current-path="/"][data-chat-mode="landing"] .chat-assistant-disclaimer-text,
+html[data-current-path="/"][data-chat-mode="landing"] button[aria-label="Close assistant panel"],
+html[data-current-path="/"][data-chat-mode="landing"] button[aria-label="Maximize assistant panel"] {
   display: none !important;
 }
-html[data-current-path="/"] #chat-assistant-sheet .h-full.flex.flex-col.justify-between {
+html[data-current-path="/"][data-chat-mode="landing"] #chat-assistant-sheet .h-full.flex.flex-col.justify-between {
   min-height: 0 !important;
   height: auto !important;
 }
 
-/* Style the input as a big rounded pill with a white background. */
-html[data-current-path="/"] .chat-assistant-floating-input,
-html[data-current-path="/"] #chat-assistant-sheet .rounded-2xl {
+/* CHAT mode: user has asked something (URL has ?assistant=…). Show a full
+   scrollable white chat card centred on the green canvas. */
+html[data-current-path="/"][data-chat-mode="chat"] #chat-assistant-sheet,
+html[data-current-path="/"][data-chat-mode="chat"] div:has(> #chat-assistant-sheet) {
+  position: fixed !important;
+  top: 24px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: min(960px, 94vw) !important;
+  height: calc(100vh - 48px) !important;
+  max-height: calc(100vh - 48px) !important;
+  background: #ffffff !important;
+  color: #111827 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35) !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  overflow: hidden !important;
+  z-index: 60 !important;
+}
+html.dark[data-current-path="/"][data-chat-mode="chat"] #chat-assistant-sheet,
+html.dark[data-current-path="/"][data-chat-mode="chat"] div:has(> #chat-assistant-sheet) {
+  background: #0f172a !important;
+  color: #e5e7eb !important;
+}
+/* Close button visible so users can go back to landing (JS intercepts click). */
+html[data-current-path="/"][data-chat-mode="chat"] button[aria-label="Close assistant panel"] {
+  display: inline-flex !important;
+}
+html[data-current-path="/"][data-chat-mode="chat"] button[aria-label="Maximize assistant panel"] {
+  display: none !important;
+}
+/* Hide landing decor + hero + pills once user is chatting. */
+html[data-current-path="/"][data-chat-mode="chat"] #landing-hero,
+html[data-current-path="/"][data-chat-mode="chat"] #landing-starters,
+html[data-current-path="/"][data-chat-mode="chat"] #landing-decor {
+  display: none !important;
+}
+/* Undo the landing pill styling so the chat input looks normal. */
+html[data-current-path="/"][data-chat-mode="chat"] .chat-assistant-floating-input,
+html[data-current-path="/"][data-chat-mode="chat"] #chat-assistant-sheet .rounded-2xl {
+  background: transparent !important;
+  border-radius: 12px !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+html[data-current-path="/"][data-chat-mode="chat"] #chat-assistant-textarea {
+  font-size: 15px !important;
+  line-height: 22px !important;
+  padding: 10px 12px !important;
+  min-height: 40px !important;
+  max-height: 160px !important;
+}
+
+/* Landing mode input: big white rounded pill. */
+html[data-current-path="/"][data-chat-mode="landing"] .chat-assistant-floating-input,
+html[data-current-path="/"][data-chat-mode="landing"] #chat-assistant-sheet .rounded-2xl {
   background: #ffffff !important;
   border-radius: 999px !important;
   padding: 8px 12px 8px 20px !important;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25) !important;
 }
-html[data-current-path="/"] #chat-assistant-textarea {
+html[data-current-path="/"][data-chat-mode="landing"] #chat-assistant-textarea {
   font-size: 17px !important;
   line-height: 28px !important;
   padding: 12px 8px !important;
@@ -92,9 +141,9 @@ html[data-current-path="/"] #chat-assistant-textarea {
   min-height: 48px !important;
   max-height: 120px !important;
 }
-html[data-current-path="/"] #chat-assistant-textarea::placeholder { color: #8a8f98 !important; }
-html[data-current-path="/"] .chat-assistant-send-button {
-  background: #4c1a5f !important;
+html[data-current-path="/"][data-chat-mode="landing"] #chat-assistant-textarea::placeholder { color: #8a8f98 !important; }
+html[data-current-path="/"][data-chat-mode="landing"] .chat-assistant-send-button {
+  background: #0F0F0F !important;
   color: white !important;
 }
 
