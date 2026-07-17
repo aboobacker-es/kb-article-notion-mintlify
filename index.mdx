@@ -5,66 +5,64 @@ mode: "custom"
 ---
 
 <style dangerouslySetInnerHTML={{__html: `
-  /* Landing page: only the AI assistant is visible, centered full-screen. */
-
-  /* 1. Hide global chrome */
+  /* Global: no left sidebar, no search anywhere. */
   #sidebar,
   nav[aria-label="Pages"],
   [data-testid*="search" i],
   button[aria-label*="search" i],
-  .search-trigger,
-  input[type="search"] { display: none !important; }
+  .search-trigger { display: none !important; }
 
-  /* 2. Hide the docs body content that would normally render below the frontmatter */
-  main > article,
-  main .prose,
-  #page-title,
-  h1#page-title { display: none !important; }
-
-  /* 3. Force the assistant panel to fullscreen-center */
-  aside[aria-label*="ssistant" i],
-  [data-testid*="ssistant" i],
-  [role="dialog"][aria-label*="ssistant" i],
-  div[class*="assistant" i][class*="panel" i],
-  div[class*="ai-panel" i] {
-    position: fixed !important;
-    inset: 60px 0 0 0 !important;      /* leave 60px for the top navbar */
-    width: 100vw !important;
-    height: calc(100vh - 60px) !important;
-    max-width: 100% !important;
-    max-height: 100% !important;
-    z-index: 40 !important;
-    border-radius: 0 !important;
-    transform: none !important;
+  /* Landing page only ("/"). Mintlify tags the current path on <html>. */
+  html[data-current-path="/"] {
+    /* The assistant's sheet parent uses this variable for its width. */
+    --assistant-sheet-width: 100vw !important;
+    --content-max-width: 100vw !important;
   }
+  /* Hide the docs content column on landing so the assistant fills the screen. */
+  html[data-current-path="/"] #content-area,
+  html[data-current-path="/"] main .mdx-content { display: none !important; }
+  /* Kill the flex-child that normally holds the content area, so its parent doesn't reserve space. */
+  html[data-current-path="/"] div.lg\\:flex-1.lg\\:min-w-0 { display: none !important; }
 
-  /* 4. Center the input + messages area within the fullscreen panel */
-  aside[aria-label*="ssistant" i] > *,
-  [data-testid*="ssistant" i] > * {
-    max-width: 900px !important;
+  /* Make the assistant sheet fill the viewport and centre its inner column. */
+  html[data-current-path="/"] #chat-assistant-sheet {
+    width: 100vw !important;
+    max-width: 100vw !important;
+  }
+  html[data-current-path="/"] #chat-assistant-sheet > * {
+    max-width: 860px !important;
     margin-left: auto !important;
     margin-right: auto !important;
+    width: 100% !important;
   }
 `}} />
 
 <script dangerouslySetInnerHTML={{__html: `
   (function() {
     if (typeof window === 'undefined') return;
+    if (window.location.pathname !== '/') return;
+    // Ensure the assistant opens on landing.
+    if (!/[?&]assistant\\b/.test(window.location.search)) {
+      window.history.replaceState(null, '', '/?assistant');
+    }
     var opened = false;
-    var tryOpen = function() {
+    var openPanel = function() {
       if (opened) return;
-      // Cover multiple selectors — Mintlify's DOM varies across versions/themes.
-      var trigger =
-        document.querySelector('[data-assistant-trigger]') ||
-        document.querySelector('button[aria-label*="assistant" i]') ||
-        document.querySelector('a[href*="assistant"]') ||
-        Array.from(document.querySelectorAll('button, a')).find(function(el) {
-          return /ask\\s*assistant|ask\\s*ai/i.test(el.textContent || '');
-        });
-      if (trigger) { trigger.click(); opened = true; }
+      // Setting the state attribute is the most reliable trigger.
+      var html = document.documentElement;
+      if (html.getAttribute('data-assistant-state') === 'closed') {
+        html.setAttribute('data-assistant-state', 'open');
+      }
+      var btn = document.getElementById('assistant-entry-mobile')
+        || document.querySelector('button[aria-label*="ssistant" i]')
+        || document.querySelector('a[href="/?assistant"]');
+      if (btn) { btn.click(); opened = true; }
     };
-    // Fire on load, then a couple of retries in case Mintlify's UI hydrates late.
-    var kick = function() { setTimeout(tryOpen, 300); setTimeout(tryOpen, 800); setTimeout(tryOpen, 1500); };
+    var kick = function() {
+      setTimeout(openPanel, 200);
+      setTimeout(openPanel, 700);
+      setTimeout(openPanel, 1500);
+    };
     if (document.readyState === 'complete') kick();
     else window.addEventListener('load', kick);
   })();
