@@ -1,42 +1,71 @@
 ---
-title: "How can we help?"
-description: "AI-powered documentation for HackerRank. Ask a question to get instant answers with citations."
+title: "HackerRank Documentation"
+description: "Ask HackerRank Docs anything, powered by AI. Every answer includes citations to the exact article."
 mode: "custom"
 ---
 
 <style dangerouslySetInnerHTML={{__html: `
-  #sidebar, nav[aria-label="Pages"] { display: none !important; }
-  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
-  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+  /* Landing page: only the AI assistant is visible, centered full-screen. */
+
+  /* 1. Hide global chrome */
+  #sidebar,
+  nav[aria-label="Pages"],
+  [data-testid*="search" i],
+  button[aria-label*="search" i],
+  .search-trigger,
+  input[type="search"] { display: none !important; }
+
+  /* 2. Hide the docs body content that would normally render below the frontmatter */
+  main > article,
+  main .prose,
+  #page-title,
+  h1#page-title { display: none !important; }
+
+  /* 3. Force the assistant panel to fullscreen-center */
+  aside[aria-label*="ssistant" i],
+  [data-testid*="ssistant" i],
+  [role="dialog"][aria-label*="ssistant" i],
+  div[class*="assistant" i][class*="panel" i],
+  div[class*="ai-panel" i] {
+    position: fixed !important;
+    inset: 60px 0 0 0 !important;      /* leave 60px for the top navbar */
+    width: 100vw !important;
+    height: calc(100vh - 60px) !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    z-index: 40 !important;
+    border-radius: 0 !important;
+    transform: none !important;
+  }
+
+  /* 4. Center the input + messages area within the fullscreen panel */
+  aside[aria-label*="ssistant" i] > *,
+  [data-testid*="ssistant" i] > * {
+    max-width: 900px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 `}} />
 
-<div className="min-h-[60vh] flex flex-col items-center justify-center text-center px-6 py-16">
-  <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
-    Ask HackerRank Docs anything
-  </h1>
-  <p className="text-lg text-gray-600 dark:text-gray-300 max-w-xl mb-8">
-    Get instant answers powered by AI. Every answer includes citations to the exact article.
-  </p>
-  <p className="text-sm text-gray-500">
-    Press <kbd className="px-2 py-1 border rounded">⌘</kbd> + <kbd className="px-2 py-1 border rounded">I</kbd> or click the button in the corner to start.
-  </p>
-</div>
-
-<script
-  dangerouslySetInnerHTML={{
-    __html: `
-      (function() {
-        if (typeof window === 'undefined') return;
-        if (window.location.pathname !== '/') return;
-        var open = function() {
-          var trigger = document.querySelector('[data-assistant-trigger]')
-            || document.querySelector('button[aria-label*="ssistant" i]')
-            || document.querySelector('button[aria-label*="AI" i]');
-          if (trigger) trigger.click();
-        };
-        if (document.readyState === 'complete') setTimeout(open, 400);
-        else window.addEventListener('load', function () { setTimeout(open, 400); });
-      })();
-    `
-  }}
-/>
+<script dangerouslySetInnerHTML={{__html: `
+  (function() {
+    if (typeof window === 'undefined') return;
+    var opened = false;
+    var tryOpen = function() {
+      if (opened) return;
+      // Cover multiple selectors — Mintlify's DOM varies across versions/themes.
+      var trigger =
+        document.querySelector('[data-assistant-trigger]') ||
+        document.querySelector('button[aria-label*="assistant" i]') ||
+        document.querySelector('a[href*="assistant"]') ||
+        Array.from(document.querySelectorAll('button, a')).find(function(el) {
+          return /ask\\s*assistant|ask\\s*ai/i.test(el.textContent || '');
+        });
+      if (trigger) { trigger.click(); opened = true; }
+    };
+    // Fire on load, then a couple of retries in case Mintlify's UI hydrates late.
+    var kick = function() { setTimeout(tryOpen, 300); setTimeout(tryOpen, 800); setTimeout(tryOpen, 1500); };
+    if (document.readyState === 'complete') kick();
+    else window.addEventListener('load', kick);
+  })();
+`}} />
