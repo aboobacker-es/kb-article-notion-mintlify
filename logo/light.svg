@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 40" width="210" height="40" role="img" aria-label="HackerRank Documentation">
-  <rect x="0" y="4" width="32" height="32" rx="6" fill="#00B140"/>
-  <text x="16" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle">H</text>
-  <text x="42" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-weight="700" font-size="19" fill="#111111">HackerRank</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" role="img" aria-label="HackerRank">
+  <rect x="0" y="0" width="40" height="40" rx="6" fill="#0F0F0F"/>
+  <rect x="24" y="12" width="10" height="16" fill="#00B140"/>
+  <path d="M 9 10 L 9 30 M 9 20 L 19 20 M 19 10 L 19 30" stroke="#ffffff" stroke-width="3" stroke-linecap="square" fill="none"/>
 </svg>
