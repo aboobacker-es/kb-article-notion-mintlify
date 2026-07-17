@@ -232,9 +232,14 @@ class Serializer:
                 url = re.sub(r"^docs/", "/", path).removesuffix(".mdx")
                 return f"- [{title}]({url})"
             return f"- {title}"
+        if btype in ("bulleted_list_item", "numbered_list_item"):
+            # Occurs when a list item is a child of a toggle/table/etc. Emit as a single item.
+            marker = "-" if btype == "bulleted_list_item" else "1."
+            text = rich_text_to_md(payload.get("rich_text", []), self.id_to_path)
+            return f"{marker} {text}"
         if btype in ("synced_block", "embed", "child_database", "link_preview", "unsupported"):
-            return f"<!-- Skipped Notion block: {btype} -->"
-        return f"<!-- Unhandled Notion block: {btype} -->"
+            return f"{{/* Skipped Notion block: {btype} */}}"
+        return f"{{/* Unhandled Notion block: {btype} */}}"
 
     def _render_list(self, items: list[dict], btype: str, page_slug: str, indent: int) -> str:
         marker = "-" if btype == "bulleted_list_item" else "1."
@@ -257,14 +262,14 @@ class Serializer:
         caption = rich_text_to_md(payload.get("caption", []), self.id_to_path)
         alt = caption or "image"
         if payload.get("type") == "file" and not url:
-            return f"<!-- IMAGE NOT AVAILABLE: internal Notion attachment -->"
+            return "{/* IMAGE NOT AVAILABLE: internal Notion attachment */}"
         if url.startswith("http"):
             local = _download_and_cache_image(url, self.images_root, page_slug)
             if local:
                 if caption:
                     return f'<Frame caption="{_attr_escape(caption)}">\n  <img src="{local}" alt="{_attr_escape(alt)}" />\n</Frame>'
                 return f'<Frame>\n  <img src="{local}" alt="{_attr_escape(alt)}" />\n</Frame>'
-        return f"<!-- IMAGE NOT AVAILABLE: {url} -->"
+        return f"{{/* IMAGE NOT AVAILABLE: {url} */}}"
 
     def _render_video(self, payload: dict, page_slug: str) -> str:
         url = payload.get("external", {}).get("url") or payload.get("file", {}).get("url", "")
@@ -274,14 +279,14 @@ class Serializer:
             local = _download_and_cache_image(url, self.images_root, page_slug)
             if local:
                 return f'<Frame>\n  <video autoPlay muted loop>\n    <source src="{local}" />\n  </video>\n</Frame>'
-        return f"<!-- VIDEO NOT AVAILABLE: {url} -->"
+        return f"{{/* VIDEO NOT AVAILABLE: {url} */}}"
 
     def _render_table(self, block: dict, page_slug: str) -> str:
         payload = block.get("table", {})
         has_header = payload.get("has_column_header", False)
         rows = block.get("_children", [])
         if not rows:
-            return "<!-- empty table -->"
+            return "{/* empty table */}"
         text_rows: list[list[str]] = []
         for row in rows:
             cells = row.get("table_row", {}).get("cells", [])
