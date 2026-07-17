@@ -29,17 +29,30 @@ main,
 /* ---------- Landing page only ("/") ---------- */
 /* Mintlify tags the current path on <html>: data-current-path="/". */
 
-/* Hide the docs content column so nothing else is visible on landing. */
+/* Hide the docs content column on landing. */
 html[data-current-path="/"] #content-area,
-html[data-current-path="/"] main .mdx-content,
-html[data-current-path="/"] .lg\:flex-1.lg\:min-w-0 {
+html[data-current-path="/"] main .mdx-content {
   display: none !important;
 }
 
-/* Break the assistant sheet out of its right-side flex column and center it
-   as a rounded card in the middle of the viewport. Overriding the inline
-   `width: var(--assistant-sheet-width, 0px)` on the parent requires !important. */
-html[data-current-path="/"] div.sticky[style*="assistant-sheet-width"] {
+/* Neutralize the flex row so the assistant's parent container stops taking
+   the wrong horizontal slot. Making the row block-level means the fixed-
+   positioned sheet just floats over the empty page. */
+html[data-current-path="/"] main {
+  display: block !important;
+}
+html[data-current-path="/"] main > div,
+html[data-current-path="/"] main .lg\:flex.lg\:w-full,
+html[data-current-path="/"] main .lg\:flex-1.lg\:min-w-0 {
+  display: block !important;
+  flex: none !important;
+  width: 100% !important;
+}
+
+/* Move the entire sticky container (assistant sheet's parent) out of flow
+   and centre it as a rounded card. */
+html[data-current-path="/"] #chat-assistant-sheet,
+html[data-current-path="/"] div:has(> #chat-assistant-sheet) {
   position: fixed !important;
   top: 210px !important;
   left: 50% !important;
@@ -52,13 +65,12 @@ html[data-current-path="/"] div.sticky[style*="assistant-sheet-width"] {
   overflow: hidden !important;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08) !important;
   border: 1px solid rgba(0, 0, 0, 0.06) !important;
-  background: var(--tw-bg-opacity, #ffffff) !important;
+  background: #ffffff !important;
 }
-
-html[data-current-path="/"] #chat-assistant-sheet {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 100% !important;
+html.dark[data-current-path="/"] #chat-assistant-sheet,
+html.dark[data-current-path="/"] div:has(> #chat-assistant-sheet) {
+  background: #0b0d0c !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
 /* Hide the close (X) and maximize (⤢) buttons on the landing chat card. */
@@ -77,7 +89,7 @@ html[data-current-path="/"] button[aria-label="Maximize assistant panel"] {
   text-align: center;
   z-index: 30;
   padding: 0 24px;
-  pointer-events: none; /* so it never blocks clicks on the panel */
+  pointer-events: none;
 }
 #landing-hero h1 {
   font-size: clamp(1.75rem, 3.5vw, 2.5rem);
