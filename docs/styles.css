@@ -1,25 +1,58 @@
-/* AI-first documentation — no left navigation, no search bar. */
-/* Users navigate exclusively through the AI chatbot and its citations. */
+/* HackerRank Docs — AI-first layout.
+   Auto-loaded on every page (Mintlify auto-includes .css files in the content directory). */
 
-/* Hide the left sidebar/navigation everywhere (belt-and-braces on top of mode:custom). */
+
+/* ---------- Global (all pages) ---------- */
+
+/* Hide the left navigation. */
 #sidebar,
 nav[aria-label="Pages"] {
   display: none !important;
 }
 
-/* Reclaim the horizontal space the sidebar used to occupy. */
-main,
-.docs-content,
-[class*="lg:pl-72"] {
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-  max-width: 100% !important;
-}
-
-/* Hide the top search bar — the AI chat replaces search. */
+/* Hide the top search bar. */
 [data-testid*="search" i],
 button[aria-label*="search" i],
 .search-trigger,
 input[type="search"] {
   display: none !important;
+}
+
+/* Reclaim the horizontal space the sidebar used to occupy. */
+main,
+[class*="lg:pl-72"] {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+
+/* ---------- Landing page only ("/") ---------- */
+/* Mintlify tags the current path on <html>: data-current-path="/". */
+
+/* Force the assistant sheet's parent container to fullscreen width. Mintlify uses
+   the CSS variable --assistant-sheet-width to control it (the parent has an inline
+   style of `width: var(--assistant-sheet-width, 0px)`), so overriding the variable
+   here effectively opens + stretches the panel. */
+html[data-current-path="/"] {
+  --assistant-sheet-width: 100vw !important;
+}
+
+/* Kill the docs content column on landing — nothing but the assistant is visible. */
+html[data-current-path="/"] #content-area,
+html[data-current-path="/"] main .mdx-content,
+html[data-current-path="/"] .lg\:flex-1.lg\:min-w-0 {
+  display: none !important;
+}
+
+/* Stretch the sheet itself to viewport width, and centre its inner column so the
+   messages/input don't span all the way across on very wide monitors. */
+html[data-current-path="/"] #chat-assistant-sheet {
+  width: 100vw !important;
+  max-width: 100vw !important;
+}
+html[data-current-path="/"] #chat-assistant-sheet > * {
+  max-width: 860px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100% !important;
 }

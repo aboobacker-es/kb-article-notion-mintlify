@@ -30,18 +30,6 @@ from . import config
 from .notion_client import NotionClient
 from .notion_extractor import PageNode, canonical_id, extract_page_id
 
-# AI-first UI: hide sidebar and search on every page. Belt-and-braces on top
-# of `mode: "custom"` — some Mintlify themes/dev-server combos don't fully
-# respect mode:custom, so this inline CSS guarantees the AI-only look
-# both locally (mint dev) and in production.
-AI_FIRST_STYLE_BLOCK = """<style dangerouslySetInnerHTML={{__html: `
-  #sidebar, nav[aria-label="Pages"] { display: none !important; }
-  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
-  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
-`}} />
-"""
-
-
 # ------- rich text -------
 
 def _escape_mdx(text: str) -> str:
@@ -157,10 +145,15 @@ class Serializer:
         self.images_root = images_root
 
     def render_page(self, node: PageNode, description: str, icon: str | None = None) -> str:
-        """Render the full MDX (frontmatter + body) for one page."""
+        """Render the full MDX (frontmatter + body) for one page.
+        The AI-first layout (hide sidebar, hide search, fullscreen assistant on
+        landing) is applied globally by docs/styles.css and docs/assistant-autoopen.js
+        — Mintlify auto-loads any .css/.js in the content directory. We deliberately
+        do NOT inject inline <style> or <script> tags here; Mintlify strips them
+        during MDX processing."""
         frontmatter = self._frontmatter(node.title, description, icon)
         body = self._render_blocks(node.blocks, node.slug, indent=0)
-        return frontmatter + "\n" + AI_FIRST_STYLE_BLOCK + "\n" + body.rstrip() + "\n"
+        return frontmatter + "\n" + body.rstrip() + "\n"
 
     def _frontmatter(self, title: str, description: str, icon: str | None) -> str:
         lines = ["---",
