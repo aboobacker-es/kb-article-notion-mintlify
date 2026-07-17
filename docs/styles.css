@@ -1,24 +1,17 @@
-/* HackerRank Docs — AI-first layout.
+/* HackerRank Docs — Slack-style AI-first landing.
    Auto-loaded on every page (Mintlify auto-includes .css files in the content directory). */
 
 
 /* ---------- Global (all pages) ---------- */
 
-/* Hide the left navigation. */
 #sidebar,
-nav[aria-label="Pages"] {
-  display: none !important;
-}
+nav[aria-label="Pages"] { display: none !important; }
 
-/* Hide the top search bar. */
 [data-testid*="search" i],
 button[aria-label*="search" i],
 .search-trigger,
-input[type="search"] {
-  display: none !important;
-}
+input[type="search"] { display: none !important; }
 
-/* Reclaim the horizontal space the sidebar used to occupy. */
 main,
 [class*="lg:pl-72"] {
   padding-left: 0 !important;
@@ -26,64 +19,89 @@ main,
 }
 
 
-/* ---------- Landing page only ("/") ---------- */
-/* Mintlify tags the current path on <html>: data-current-path="/". */
+/* ==========================================================
+   LANDING PAGE ("/")  —  Slack-style help-center hero + pill
+   ========================================================== */
 
-/* Hide the docs content column on landing. */
+/* Full-viewport dark purple background. */
+html[data-current-path="/"],
+html[data-current-path="/"] body,
+html[data-current-path="/"] #__next {
+  background: #3b0f4a !important;
+  color: #ffffff !important;
+}
+
+/* Hide the docs content column. */
 html[data-current-path="/"] #content-area,
-html[data-current-path="/"] main .mdx-content {
-  display: none !important;
-}
+html[data-current-path="/"] main .mdx-content { display: none !important; }
 
-/* Neutralize the flex row so the assistant's parent container stops taking
-   the wrong horizontal slot. Making the row block-level means the fixed-
-   positioned sheet just floats over the empty page. */
-html[data-current-path="/"] main {
-  display: block !important;
-}
+/* Neutralise the flex row so the panel doesn't get pushed to left/right. */
+html[data-current-path="/"] main { display: block !important; }
 html[data-current-path="/"] main > div,
 html[data-current-path="/"] main .lg\:flex.lg\:w-full,
 html[data-current-path="/"] main .lg\:flex-1.lg\:min-w-0 {
-  display: block !important;
-  flex: none !important;
-  width: 100% !important;
+  display: block !important; flex: none !important; width: 100% !important;
 }
 
-/* Move the entire sticky container (assistant sheet's parent) out of flow
-   and centre it as a rounded card. */
+/* Make the assistant sheet a transparent card that only holds the input,
+   floating in the middle of the purple canvas. */
 html[data-current-path="/"] #chat-assistant-sheet,
 html[data-current-path="/"] div:has(> #chat-assistant-sheet) {
   position: fixed !important;
-  top: 210px !important;
+  top: 260px !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
-  width: min(880px, 92vw) !important;
-  height: calc(100vh - 250px) !important;
-  max-height: 720px !important;
+  width: min(720px, 92vw) !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
   z-index: 40 !important;
-  border-radius: 16px !important;
-  overflow: hidden !important;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08) !important;
-  border: 1px solid rgba(0, 0, 0, 0.06) !important;
-  background: #ffffff !important;
-}
-html.dark[data-current-path="/"] #chat-assistant-sheet,
-html.dark[data-current-path="/"] div:has(> #chat-assistant-sheet) {
-  background: #0b0d0c !important;
-  border-color: rgba(255, 255, 255, 0.08) !important;
+  overflow: visible !important;
 }
 
-/* Hide the close (X) and maximize (⤢) buttons on the landing chat card. */
+/* Hide the "Assistant" header, disclaimer, close/expand buttons, and the empty
+   messages area — leaving only the input visible on landing. */
+html[data-current-path="/"] .chat-assistant-sheet-header,
+html[data-current-path="/"] .chat-assistant-disclaimer-text,
 html[data-current-path="/"] button[aria-label="Close assistant panel"],
 html[data-current-path="/"] button[aria-label="Maximize assistant panel"] {
   display: none !important;
 }
+html[data-current-path="/"] #chat-assistant-sheet .h-full.flex.flex-col.justify-between {
+  min-height: 0 !important;
+  height: auto !important;
+}
 
-/* Landing hero — injected by docs/assistant-autoopen.js.
-   Sits between the top navbar (~60px) and the chat card (starts at 210px). */
+/* Style the input as a big rounded pill with a white background. */
+html[data-current-path="/"] .chat-assistant-floating-input,
+html[data-current-path="/"] #chat-assistant-sheet .rounded-2xl {
+  background: #ffffff !important;
+  border-radius: 999px !important;
+  padding: 8px 12px 8px 20px !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25) !important;
+}
+html[data-current-path="/"] #chat-assistant-textarea {
+  font-size: 17px !important;
+  line-height: 28px !important;
+  padding: 12px 8px !important;
+  color: #111827 !important;
+  min-height: 48px !important;
+  max-height: 120px !important;
+}
+html[data-current-path="/"] #chat-assistant-textarea::placeholder { color: #8a8f98 !important; }
+html[data-current-path="/"] .chat-assistant-send-button {
+  background: #4c1a5f !important;
+  color: white !important;
+}
+
+/* Landing hero heading — injected by docs/assistant-autoopen.js */
 #landing-hero {
   position: fixed;
-  top: 100px;
+  top: 130px;
   left: 0;
   right: 0;
   text-align: center;
@@ -92,16 +110,66 @@ html[data-current-path="/"] button[aria-label="Maximize assistant panel"] {
   pointer-events: none;
 }
 #landing-hero h1 {
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-  font-weight: 600;
-  color: #111;
-  margin: 0 0 6px;
-  letter-spacing: -0.02em;
-}
-#landing-hero p {
-  font-size: 0.95rem;
-  color: #6b7280;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: #ffffff;
   margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
-html.dark #landing-hero h1 { color: #f5f5f5; }
-html.dark #landing-hero p  { color: #9ca3af; }
+#landing-hero p { display: none; }
+
+/* Starter question pills — injected by JS */
+#landing-starters {
+  position: fixed;
+  top: 380px;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 0 24px;
+}
+#landing-starters button {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s ease;
+}
+#landing-starters button:hover { background: rgba(255, 255, 255, 0.22); }
+
+/* "Powered by …" footer text under the pills */
+#landing-footer {
+  position: fixed;
+  top: 450px;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  pointer-events: none;
+}
+
+/* Decorative SVG blobs — injected by JS at each corner. */
+#landing-decor {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Adjust top navbar for the dark purple background */
+html[data-current-path="/"] #navbar {
+  background: transparent !important;
+  border-bottom: 0 !important;
+}
+html[data-current-path="/"] #navbar-transition { display: none !important; }
