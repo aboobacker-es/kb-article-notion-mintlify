@@ -7,15 +7,12 @@
   if (window.location.pathname !== "/") return;
 
   var openAssistant = function () {
-    var html = document.documentElement;
-    if (html.getAttribute("data-assistant-state") === "closed") {
-      html.setAttribute("data-assistant-state", "open");
-    }
-    var btn =
-      document.getElementById("assistant-entry-mobile") ||
-      document.querySelector('button[aria-label*="ssistant" i]') ||
-      document.querySelector('a[href="/?assistant"]');
-    if (btn && html.getAttribute("data-assistant-state") !== "open") {
+    // Trigger a real click — React state updates when the user clicks the
+    // toggle button, so setting data-assistant-state directly on <html>
+    // does NOT sync with Mintlify's internal state.
+    var btn = document.getElementById("assistant-entry-mobile")
+      || document.querySelector('button[aria-label="Toggle assistant panel"]');
+    if (btn && document.documentElement.getAttribute("data-assistant-state") === "closed") {
       btn.click();
     }
   };
@@ -30,12 +27,15 @@
     document.body.appendChild(hero);
   };
 
-  var kick = function () {
-    setTimeout(function () { openAssistant(); injectHero(); }, 200);
-    setTimeout(function () { openAssistant(); injectHero(); }, 700);
-    setTimeout(function () { openAssistant(); injectHero(); }, 1500);
+  var run = function () {
+    injectHero();
+    openAssistant();
+    // Retry in case Mintlify's button wasn't hydrated on the first pass.
+    setTimeout(openAssistant, 400);
+    setTimeout(openAssistant, 1000);
+    setTimeout(openAssistant, 2000);
   };
 
-  if (document.readyState === "complete") kick();
-  else window.addEventListener("load", kick);
+  if (document.readyState === "complete") run();
+  else window.addEventListener("load", run);
 })();
