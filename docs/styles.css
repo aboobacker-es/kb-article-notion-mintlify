@@ -23,11 +23,11 @@ main,
    LANDING PAGE ("/")  —  Slack-style help-center hero + pill
    ========================================================== */
 
-/* Full-viewport dark purple background. */
+/* Full-viewport HackerRank green background. */
 html[data-current-path="/"],
 html[data-current-path="/"] body,
 html[data-current-path="/"] #__next {
-  background: #3b0f4a !important;
+  background: #00B140 !important;
   color: #ffffff !important;
 }
 
@@ -119,10 +119,12 @@ html[data-current-path="/"] .chat-assistant-send-button {
 }
 #landing-hero p { display: none; }
 
-/* Starter question pills — injected by JS */
+/* Starter question pills — injected by JS, placed just below the pill input.
+   Input container sits at top:260px with an auto height (~78px including padding
+   and shadow), so we start pills at 372px. */
 #landing-starters {
   position: fixed;
-  top: 380px;
+  top: 372px;
   left: 0;
   right: 0;
   z-index: 30;
@@ -133,30 +135,17 @@ html[data-current-path="/"] .chat-assistant-send-button {
   padding: 0 24px;
 }
 #landing-starters button {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.16);
   color: #ffffff;
   border: none;
-  border-radius: 10px;
-  padding: 10px 16px;
+  border-radius: 999px;
+  padding: 10px 18px;
   font-size: 14px;
   cursor: pointer;
   font-family: inherit;
   transition: background 0.15s ease;
 }
-#landing-starters button:hover { background: rgba(255, 255, 255, 0.22); }
-
-/* "Powered by …" footer text under the pills */
-#landing-footer {
-  position: fixed;
-  top: 450px;
-  left: 0;
-  right: 0;
-  z-index: 30;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 13px;
-  pointer-events: none;
-}
+#landing-starters button:hover { background: rgba(255, 255, 255, 0.28); }
 
 /* Decorative SVG blobs — injected by JS at each corner. */
 #landing-decor {

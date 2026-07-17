@@ -52,14 +52,6 @@
     document.body.appendChild(wrap);
   };
 
-  var injectFooter = function () {
-    if (document.getElementById("landing-footer")) return;
-    var f = document.createElement("div");
-    f.id = "landing-footer";
-    f.textContent = "Powered by HackerRank AI";
-    document.body.appendChild(f);
-  };
-
   var injectDecor = function () {
     if (document.getElementById("landing-decor")) return;
     var d = document.createElement("div");
@@ -84,7 +76,6 @@
     injectDecor();
     injectHero();
     injectStarters();
-    injectFooter();
     openAssistant();
     setTimeout(openAssistant, 400);
     setTimeout(openAssistant, 1000);
