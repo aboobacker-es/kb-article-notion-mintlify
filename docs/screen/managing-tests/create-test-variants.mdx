@@ -1,0 +1,137 @@
+---
+title: "Create Test Variants"
+description: "Test variants allow you to create a single assessment that adapts to different candidate profiles. You can design multiple variants within the same assessment…"
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+Test variants allow you to create a single assessment that adapts to different candidate profiles. You can design multiple variants within the same assessment to personalize the evaluation based on roles, skills, or other criteria. This approach eliminates the need to manage separate tests, improves efficiency, and ensures candidates are assessed on the most relevant content.
+
+### Creating test variants
+
+To create test variants:
+
+<Frame>
+  <img src="/images/create-test-variants/6a6f58cce704f9c2.gif" alt="image" />
+</Frame>
+
+1. Log in to your **HackerRank for Work** account using your credentials.
+1. Go to the **Tests** tab.
+1. Open the test you want to modify.
+1. Go to the **Questions** tab.
+1. Click the more option menu (**⋮**) in the top right corner.
+1. Select **Create Variants.**
+1. Click **Create Variants.**
+
+The system converts the existing test into **Variant 1** and opens **Variant 2**, where you can start creating the second version. To add more variants, select the **+** icon next to the tabs.
+
+<Note>
+**Note:** A variant-based test requires at least two variants.
+</Note>
+
+### Renaming a variant
+
+To rename a test variant:
+
+1. Click the more option menu (**⋮**) next to the variant name.
+1. Select **Rename**.
+
+  <Frame>
+    <img src="/images/create-test-variants/d79798e5a2e80195.png" alt="image" />
+  </Frame>
+1. Enter the new name.
+1. Click **Save**.
+
+### Adding questions or sections to a variant
+
+To add questions or sections:
+
+1. Select the variant tab (for example, Variant 2).
+1. Click **Add New**.
+1. Choose one of the following options:
+
+  <Frame>
+    <img src="/images/create-test-variants/c1c62cb1a05b25ab.png" alt="image" />
+  </Frame>
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+1. Select the relevant questions or sections.
+1. Click **Add** to include them in the variant.
+
+<Note>
+**Note:** You can also add skill-based questions or reuse existing sections directly from the empty variant screen using the **Add New Skill Bundle** or **Add from Other Variants** buttons.
+</Note>
+
+### Deleting a variant
+
+To delete a variant:
+
+1. Click the more option menu (**⋮**) next to the variant name.
+1. Select **Delete**.
+
+  <Frame>
+    <img src="/images/create-test-variants/accf12e73bd08fbc.png" alt="image" />
+  </Frame>
+
+  A confirmation dialog appears. If the variant is mapped to a candidate option, the system also removes the mapping.
+1. Click **Delete Variant** to confirm.
+
+<Note>
+**Note:** You cannot delete a variant if only two variants exist. A test requires at least two variants. To proceed, manually remove the sections from the variant instead.
+</Note>
+
+To remove a section from a test variant:
+
+1. Hover over the section you want to remove.
+1. Click the trash icon that appears.
+
+### Assigning test variants to candidates
+
+You can use routing logic to assign candidates to specific variants.
+
+To configure logic:
+
+<Frame>
+  <img src="/images/create-test-variants/0977853da6b50062.gif" alt="image" />
+</Frame>
+
+1. Click **Add Logic** in the bottom right corner**.** Alternatively, use **Add Variant Logic** in the top navigation bar.
+1. Enter a routing question. (for example, What is your experience level?).
+1. (Optional) Add description to provide additional context about the variant options.
+1. Define the response options (For example, Less than 5 years, Greater than 5 years).
+1. Select the appropriate variant for each option using the **Select Variant **dropdown.
+1. Click **Confirm** to save and activate the routing logic.
+
+After you configure routing logic, publishing becomes enabled.
+
+<Note>
+**Note: **Variants without logic will not be visible to any candidate until you add logic.
+</Note>
+
+### Evaluating test variants
+
+After a candidate completes their assigned variant, go to the **Candidates** tab to view the variant they used. The **Candidate Option **column displays the option selected by each candidate.
+
+Use the **Candidate Option** filter to filter candidates by variant.
+
+<Note>
+**Note: **For variant-based tests, you can add extra time at the section level for candidates. For more information, see [Adding extra time in variant-based tests](https://support.hackerrank.com/articles/4811403281-adding-extra-time-for-candidates#adding-extra-time-in-variant-based-tests).
+</Note>
+
+### Additional note
+
+The **All Sections** view allows you to edit sections that apply to all variants. Any changes you make here apply to the corresponding section in each variant.
+
+<Frame>
+  <img src="/images/create-test-variants/12a6bd3d184cd92f.png" alt="image" />
+</Frame>

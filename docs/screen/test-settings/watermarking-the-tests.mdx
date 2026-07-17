@@ -1,0 +1,37 @@
+---
+title: "Watermarking the Tests"
+description: "The problem of leaking questions by taking pictures of the test screen is prevalent. It is more aggravated in the case of large campus events. This leads to ma…"
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+The problem of leaking questions by taking pictures of the test screen is prevalent. It is more aggravated in the case of large campus events. This leads to many of HackerRank library/custom questions getting leaked.
+
+To prevent that, HackerRank is launching the capability to add Watermarks on the questions inside a test. Enabling this feature would add the logged-in user's email ID as a watermark on the question section of the assessment page. This would act as a nudge to deter candidates from taking pictures of HackerRank’s question content and sharing it on social channels like Telegram, which would lead to their identity being leaked.
+
+### Enabling Watermarking in Tests
+
+- You can open the test for which you want to enable the watermark feature, click on **Settings, **and select **Test Integrity **from the side menu.
+
+  <Frame>
+    <img src="/images/watermarking-the-tests/f3e3a0a26e29a56f.bin" alt="image" />
+  </Frame>
+- In test Integrity settings, scroll down to find the **Watermarking **option. Enable it by switching on the toggle.
+
+  <Frame>
+    <img src="/images/watermarking-the-tests/6feec957b6c02006.bin" alt="image" />
+  </Frame>
+
+**Note:** For now, the watermark feature is only available for Coding, Database, Approximate Solution, and MCQ question types.
+
+#### Watermark Inside a Test
+
+The arrow markings in the below image highlight the Watermarks placed over the question pane inside a test.
+
+**Note**: This feature intends to ensure that we deter candidates from cheating. This is not a detection mechanism yet.

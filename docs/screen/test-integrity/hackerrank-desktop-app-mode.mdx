@@ -1,0 +1,151 @@
+---
+title: "HackerRank Desktop App Mode"
+description: "This feature is part of the AI Add-on. For more information, see 📄 HackerRank AI Add-on."
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+This feature is part of the AI Add-on. For more information, see [📄 HackerRank AI Add-on](https://app.notion.com/docs/3147b674-5cbb-4bde-9528-7699bb64b1a7/articles/8704fb40-5ded-4188-b5a6-cfd653d0f5c9).
+
+HackerRank Desktop App Mode allows you to conduct tests in a secure, lightweight desktop application. This mode provides stricter proctoring controls that are not possible in web browsers.
+
+When you enable Desktop App Mode, the following integrity controls apply:
+
+- Prevents candidates from sharing remote access to their systems.
+- Prevents candidates from sharing their screen or taking screenshots.
+- Blocks the use of other applications during the test, including tools such as Cluely, video conferencing, messaging applications, or LLM applications.
+- Enforces full-screen mode throughout the test and does not allow candidates to navigate away from the test interface.
+- Prevents the test from running on a virtual machine.
+
+Desktop App Mode includes all features available in [📄 Proctor Mode](https://app.notion.com/docs/3147b674-5cbb-4bde-9528-7699bb64b1a7/articles/90138fc5-1335-48d7-bc61-dc591f99d664) and provides the highest level of integrity controls for administering tests on the HackerRank platform.
+
+## Enable HackerRank Desktop App Mode
+
+HackerRank Desktop App Mode builds on the features of **Proctor Mode**. To use it in tests, first enable Proctor Mode at the **company level**, and then enable Desktop App Mode at the **test level**.
+
+To enable HackerRank Desktop App Mode:
+
+### Step 1: Enable Proctor Mode in Company Settings
+
+1. Log in to your **HackerRank for Work** account using your credentials.
+1. Go to **Settings \> Test Settings**.
+1. In the **Test Integrity** section, turn on **Proctor Mode**.
+
+  <Frame>
+    <img src="/images/hackerrank-desktop-app-mode/2830a025379d455a.png" alt="image" />
+  </Frame>
+1. In the confirmation dialog box, click **Agree & Enable**.
+1. Click **Save Changes**.
+
+### Step 2: Enable HackerRank Desktop App Mode at the test level
+
+1. Go to the **Tests** tab.
+1. Select the test you want to configure.
+1. Go to **Settings \> Test Integrity**.
+1. Turn on the **HackerRank Desktop App Mode **toggle.
+
+  <Frame>
+    <img src="/images/hackerrank-desktop-app-mode/6321960ed5b0ab97.png" alt="image" />
+  </Frame>
+1. Click **Save Changes**.
+
+<Note>
+**Note: **When HackerRank Desktop App Mode is enabled, **AI Plagiarism Detection** and **Image Analysis** are enabled by default.
+</Note>
+
+## How HackerRank Desktop App Mode works
+
+Desktop App Mode enforces integrity at every stage of the test session.
+
+### Before the test
+
+Candidates follow a guided onboarding flow that prepares them for the test and prevents integrity issues.
+
+- **Download desktop application: **Candidates download a lightweight HackerRank desktop application, available for Windows and macOS. Once downloaded, candidates click **Start Test** to launch the application.
+
+  <Frame>
+    <img src="/images/hackerrank-desktop-app-mode/3d5800c161f57e68.png" alt="image" />
+  </Frame>
+- **System permissions: **When a candidate uses the desktop application for the first time, they must grant the required system permissions. These permissions allow the application to monitor the candidate’s system effectively during the test.
+- **Consent and test rules:** Candidates review and acknowledge a list of prohibited actions, such as switching tabs or using external tools, and must give consent to proceed.
+- **Permissions: **Candidates must grant the following permissions to start the test:
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+Once candidates select **Start Test**, the application launches the test in full-screen mode. Candidates can exit full-screen mode after completing the test.
+
+### During the test
+
+- **Full-screen enforcement: **The application prevents candidates from exiting full-screen mode or switching to other applications. It blocks all such attempts. If a candidate bypasses these restrictions, the system automatically flags and logs the activity.
+- **Application monitoring: **The application detects and closes any other programs that candidates try to open during the test, including invisible cheating tools such as Cluely and Ultracode.
+- **Webcam monitoring: **AI continuously monitors candidate presence. If the candidate is not visible or multiple faces are detected, a warning appears, and the event is recorded.
+
+  <Frame>
+    <img src="/images/hackerrank-desktop-app-mode/a0d5d059a7db3646.png" alt="image" />
+  </Frame>
+- **Object detection in webcam feed**: Detects and flags mobile phones and tablets in the candidate’s webcam feed. It captures images with the detected objects and adds them to the report for review.
+- **Multiple monitor and screen mirroring detection:** The system continuously checks for multiple monitors and screen mirroring during the test. It flags any new monitor connections or mirroring activity, and candidates must disconnect them to continue.
+
+  <Frame>
+    <img src="/images/hackerrank-desktop-app-mode/5877c63794ac552b.gif" alt="image" />
+  </Frame>
+- **Prevent screenshots: **The application prevents the candidate from taking screenshots during the test. If the candidate manages to take a screenshot, the screenshot appears blank.
+- **Conversation detection in the code editor**: Detects patterns where candidates type and delete content in the editor that may indicate external communication. Such activity is flagged for review as potential external assistance.
+- **Copy-paste restrictions:** Copy-paste functionality is disabled to prevent pasting content from external sources into the editor.
+
+### After the test
+
+When the test ends, the system generates a comprehensive summary and detailed reports that help you assess candidate behaviour and overall test integrity. These reports are similar to those available in [📄 Proctor Mode](https://app.notion.com/docs/3147b674-5cbb-4bde-9528-7699bb64b1a7/articles/90138fc5-1335-48d7-bc61-dc591f99d664).
+
+#### Summary report
+
+The summary report offers a concise overview of the session, including:
+
+- Indication of whether integrity issues occurred
+- Integrity summary
+
+**Integrity results**
+
+The system assigns an integrity rating of **High** or **Medium** based on the severity of detected issues.
+
+The integrity results evaluate violations across two areas:
+
+- **Webcam images**: Analyze webcam images for suspicious behavior. For example, missing candidate face for a long period, multiple faces, or secondary faces.
+- **Code Similarity:** Compares the code submitted by a candidate with the code submitted by other candidates.
+
+**Integrity summary**
+
+The integrity result is paired with additional details in the **Integrity Summary**. The** Integrity Summary **provides a consolidated view of all detected integrity signals for a candidate. It lets you preview issues and drill down into supporting evidence within the same section.
+
+<Frame>
+  <img src="/images/hackerrank-desktop-app-mode/9ee48e2406d0c7b9.gif" alt="image" />
+</Frame>
+
+#### Session Replay
+
+Session Replay provides a timeline-based, video-style view of the test session. It includes the following features:
+
+<Frame>
+  <img src="/images/hackerrank-desktop-app-mode/8748ef6425e08f43.gif" alt="image" />
+</Frame>
+
+- Recording of the candidate’s test session across the full browser screen
+- Lists all critical test events, including integrity events. You can search for events and click any event to jump to the corresponding timestamp in the recording.
+- Displays a synchronized timeline with test activity and webcam images by timestamp.
+- Captures webcam images every 15 seconds.
+
+<Note>
+**Note:** Content protection is temporarily unavailable in the HackerRank Desktop App because screen recording requires screenshot permissions that were previously restricted.
+</Note>

@@ -1,0 +1,26 @@
+---
+title: "When I edit a live test, when will the edits take effect for the candidates?"
+description: ""
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+|   |   |
+|---|---|
+| **Edits made to a live test** | **Experience for candidates in a live test session** |
+| Test password change | Affects only when a candidate has to re-login. |
+| Time added or reduced | • Affects when a candidate reloads the page.  
+• Also reflects when the candidate re-logins (i.e. HackerRank test tab is not open when test changes are made). |
+| Question added/removed | Changes won't affect candidates already in a test. |
+| Edits to sectional settings | Changes will reflect on page reload. |
+| Edits to test Instructions | Changes will reflect during page reload or re-login. |
+
+<Note>
+**Note: **Candidates logging in after the edits went live will see all the changes made above.
+</Note>

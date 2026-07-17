@@ -1,0 +1,115 @@
+---
+title: "Manage Leaked Questions"
+description: "A question is considered leaked if it appears in publicly accessible search results and matches a HackerRank Library or customer-created question both structur…"
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+A question is considered leaked if it appears in publicly accessible search results and matches a HackerRank Library or customer-created question both structurally and semantically.
+
+## Detecting leaked questions
+
+HackerRank uses a leak detection algorithm that automatically searches at regular intervals to identify leaked questions from the leak-protected skill sets in your tests.
+
+### How leak detection works
+
+The system:
+
+- Searches the web for matches to a question's problem statement.
+- Scrapes the content and applies string-matching algorithms.
+- Flags any question that meets or exceeds the defined matching score threshold.
+
+<Note>
+**Note:**
+</Note>
+
+## Reporting leaked questions
+
+If you find a HackerRank Library or your company question that appears online, you can manually report it.
+
+To report a leaked question:
+
+1. Log in to your **HackerRank for Work** account using your credentials.
+1. Go to the **Library** tab.
+1. Select the **Tests** or **Interview** tab.
+1. Select the source of questions from the **Library** drop-down.
+1. Locate the leaked question.
+1. Click the more options menu (⋮) next to the question and select **Report question leak**.
+
+  <Frame>
+    <img src="/images/manage-leaked-questions/2fdc5e2c9efa08ec.png" alt="image" />
+  </Frame>
+1. In the dialog box, paste public URLs where the question appears.
+
+  <Frame>
+    <img src="/images/manage-leaked-questions/13243f205a5aa666.png" alt="image" />
+  </Frame>
+1. Click **Submit**. A success message appears.
+
+## Viewing leaked questions in library
+
+By default, HackerRank hides leaked questions from the Library.
+
+To view leaked questions:
+
+1. Go to the **Library** tab.
+1. Select the **Tests** or **Interview** tab.
+1. Select the source of questions from the **Library** drop-down.
+1. Click the **Filter** icon and select **Others.**
+
+  <Frame>
+    <img src="/images/manage-leaked-questions/4c46b31b321a3c38.bin" alt="image" />
+  </Frame>
+1. Clear the **Hide Leaked Questions** checkbox. The leaked questions appear with a warning icon.
+
+  <Frame>
+    <img src="/images/manage-leaked-questions/3ddc6558a79e0fd6.png" alt="image" />
+  </Frame>
+
+## Viewing tests with leaked questions
+
+You can identify tests that contain one or more leaked questions directly from the test listing page, including tests in the draft stage.
+
+To view tests with leaked questions:
+
+1. Log in to your **HackerRank for Work** account using your credentials.
+1. Go to the **Tests** tab.
+1. In the **Active Tests **tab, select the **Leaked Tests** checkbox under the **Filters** panel. An indicator appears next to each test that contains leaked questions.
+
+  <Frame>
+    <img src="/images/manage-leaked-questions/ade7403c91adc067.gif" alt="image" />
+  </Frame>
+1. Hover over the indicator to view the number of leaked questions in the test.
+1. Select a test to view the leaked questions
+
+  <Frame>
+    <img src="/images/manage-leaked-questions/669a29d33689739a.png" alt="image" />
+  </Frame>
+
+## Handling leaked questions
+
+Take the following actions to maintain test integrity and minimize exposure:
+
+- **Avoid using leaked questions in new tests**: Enable the **Hide Leaked Questions** toggle when selecting questions during test creation.
+- **Replace leaked questions**: Use the **Replace Question** option to replace any leaked question with a similar non-leaked one. For more information, see [📄 Replace Leaked Question](https://app.notion.com/docs/3147b674-5cbb-4bde-9528-7699bb64b1a7/articles/5a5ff31e-aabc-486a-b1c6-226976ab4446).
+- **Monitor ongoing tests**: If a leaked question is included in an active test, use the [plagiarism detection](https://support.hackerrank.com/articles/8000786908-ai-plagiarism-detection) functionality to monitor submissions. Replace the question if required.
+- **Adjust scoring for completed tests**: For completed tests, disregard the leaked question during evaluation to ensure fairness.
+
+## Leak mitigation and takedown actions
+
+To maintain content integrity, HackerRank takes the following measures:
+
+- **DMCA takedowns**: HackerRank issues DMCA takedown notices to websites hosting leaked questions, prioritizing cases based on severity and domain type. For more information, see[ HackerRank's DMCA Process](https://www.hackerrank.com/blog/dmca-takedown-policy/)**.**
+- **Library updates**: HackerRank runs leakage detection daily and updates the question library regularly with new question types and skills. For more information, see [📄 HackerRank Question Count Comparison by Subscription Plan](https://app.notion.com/docs/3147b674-5cbb-4bde-9528-7699bb64b1a7/articles/58379529-741e-454a-b9fa-a0c27e38da62).
+- **Automatic replacement of leaked questions in tests:** If a test contains leaked questions, HackerRank automatically replaces them with similar questions for leakage-protected sections.
+
+  <Frame>
+    <img src="/images/manage-leaked-questions/98351438507a8d0d.png" alt="image" />
+  </Frame>
+- **Custom question monitoring:** HackerRank runs leakage detection for customer-created questions every two weeks to identify and mitigate potential breaches.

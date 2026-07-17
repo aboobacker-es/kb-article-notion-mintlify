@@ -1,0 +1,91 @@
+---
+title: "How to download Bash history, logs and session playback recording?"
+description: "DevOps Questions are automatically evaluated and assigned a score based on your Bash Check script. However, to further assess the commands executed by the cand…"
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+DevOps Questions are automatically evaluated and assigned a score based on your Bash Check script. However, to further assess the commands executed by the candidate, you can download the Bash history and the session playback recording from the candidate's detailed Test report. You can also view the output log for your Bash Check Script which was executed for the automatic evaluation.
+
+1. Navigate to **Tests**.
+1. Select the Test in which you have a DevOps type Question and want to assess the Test results.
+
+  <Frame>
+    <img src="/images/how-to-download-bash-history-logs-and-session-playback-recording/2bda3a485f6bcaa6.bin" alt="image" />
+  </Frame>
+
+*Selecting a Test to evaluate results*
+
+1. Click the **Candidates** tab and select the candidate entry to evaluate. The candidate Test summary page is displayed.
+1. Click the **Detailed** tab to view the detailed test report.
+1. Navigate to the DevOps type Question. The Question is evaluated and assigned a score automatically.
+
+You can specifically view the **Task check log**, **Playback**, and **Download** tabs for DevOps Questions in the test report.
+
+<Frame>
+  <img src="/images/how-to-download-bash-history-logs-and-session-playback-recording/a16420973f5f1f26.bin" alt="image" />
+</Frame>
+
+*Tabs available under a DevOps Question report*
+
+1. **Downloading Bash History**
+
+Click on the **Download** tab and click '**Download as zip file'** to download the Bash history, logs, and complete session recording files.
+
+<Frame>
+  <img src="/images/how-to-download-bash-history-logs-and-session-playback-recording/87a785504046db89.bin" alt="image" />
+</Frame>
+
+*Downloading Bash History*
+
+In the downloaded path, the **bash_history** is available under the **user_log** folder.
+
+<Frame>
+  <img src="/images/how-to-download-bash-history-logs-and-session-playback-recording/9ca614ebcef6138b.bin" alt="image" />
+</Frame>
+
+*Bash history file*
+
+1. **Viewing Session Playback**
+
+Click on the **Playback** tab to view a recording of the candidate's attempt to solve the Question during the Test.
+
+<Frame>
+  <img src="/images/how-to-download-bash-history-logs-and-session-playback-recording/2c8437d791143280.bin" alt="image" />
+</Frame>
+
+*Code Playback Recording*
+
+Alternatively, in the downloaded path, the recording file is available in the **tty_rec** folder.
+
+<Frame>
+  <img src="/images/how-to-download-bash-history-logs-and-session-playback-recording/7765bc4f8bfc390f.bin" alt="image" />
+</Frame>
+
+*The playback recording file*
+
+1. **Viewing Bash Check Script Log**
+
+Click on the **Task check log** tab to view the output log for the Bash Check script used to automatically evaluate the DevOps Question.
+
+<Frame>
+  <img src="/images/how-to-download-bash-history-logs-and-session-playback-recording/299db25d2b6e07ac.bin" alt="image" />
+</Frame>
+
+*The output log for Bash check script*
+
+In the downloaded path, the log is available under the **taskcheck_log** folder.
+
+<Frame>
+  <img src="/images/how-to-download-bash-history-logs-and-session-playback-recording/2c3db19cb18f964c.bin" alt="image" />
+</Frame>
+
+*The output log files*
+
+Refer to the [Scoring a DevOps Question](https://support.hackerrank.com/hc/en-us/articles/219879848-Scoring-a-DevOps-Question) topic for more information about the Bash Check script.

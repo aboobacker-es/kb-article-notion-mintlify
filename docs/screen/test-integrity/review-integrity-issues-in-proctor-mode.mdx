@@ -1,0 +1,204 @@
+---
+title: "Review Integrity Issues in Proctor Mode"
+description: "Proctor Mode generates Summary Report, Session Replay, and Detailed Report to help you assess candidate behavior and overall test integrity. This article expla…"
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+Proctor Mode generates Summary Report, Session Replay, and Detailed Report to help you assess candidate behavior and overall test integrity. This article explains how to interpret these reports and review common integrity issues.
+
+## Reporting views in Proctor Mode
+
+Proctor Mode offers three reporting views. Each view provides a different level of visibility into a candidate’s test activity and helps you evaluate potential integrity concerns.
+
+### Summary Report
+
+The **Summary Report** provides a high-level overview of the test session. It includes:
+
+<Frame>
+  <img src="/images/review-integrity-issues-in-proctor-mode/d343216dc43fd02e.gif" alt="image" />
+</Frame>
+
+- **Integrity Issues indicator**: Indicates whether Proctor Mode detected any integrity issues during the session and displays the severity level.
+- **Integrity Summary**: Lists each reason the system flagged the session. Each suspicious activity appears as a separate bullet.
+
+### Session Replay
+
+Session Replay provides a timeline-based, video-style view of the test session. It includes:
+
+<Frame>
+  <img src="/images/review-integrity-issues-in-proctor-mode/27b4ca83fe69c89d.gif" alt="image" />
+</Frame>
+
+- Recording of the candidate’s test session across the full browser screen.
+- Lists all critical test events, including integrity events. You can search for events and click any event to jump to the corresponding timestamp in the recording.
+- Synchronized timeline showing test activity, webcam images, and screenshots by timestamp.
+- Screenshots and webcam images are captured every 15 seconds, with increased frequency around integrity violations to provide contextual evidence.
+- Automated analysis of screenshots and webcam images that highlights suspicious activity.
+
+### Detailed Report
+
+The Detailed Report offers an in-depth view of how the candidate performed on each question. You can use this report to investigate a candidate’s performance at a granular level and to review integrity issues, especially when a candidate is flagged for code similarity.
+
+## Workflow for reviewing integrity issues
+
+Follow these steps to evaluate integrity issues in a candidate’s test session.
+
+### Step 1: Check the Integrity Issues indicator
+
+Open the candidate’s **Summary Report** and check the **Integrity Issues** indicator in the upper-right corner.
+
+<Frame>
+  <img src="/images/review-integrity-issues-in-proctor-mode/710e2d6a1bff9bbf.png" alt="image" />
+</Frame>
+
+The indicator shows one of the following values, depending on the severity of the detected issues:
+
+- High
+- Medium
+- No issues detected
+
+If the report shows **No issues detected**, no further integrity review is required.
+
+If the report shows **High** or **Medium**, continue to the next step.
+
+### Step 2: Review the Integrity Summary
+
+Scroll to the **Integrity Summary** to view the specific reasons the system flagged the session. Each item represents a type of suspicious activity that requires review.
+
+<Frame>
+  <img src="/images/review-integrity-issues-in-proctor-mode/d338072eef612577.png" alt="image" />
+</Frame>
+
+Continue to the next step for a detailed review of each activity type.
+
+### Step 3: Review each suspicious activity in detail
+
+The sections below describe common types of suspicious activity and how to evaluate them.
+
+#### Tab switch or full-screen exit
+
+Proctor Mode flags the session when the candidate:
+
+- Leaves the test tab for 10 seconds or more (single or cumulative duration)
+- Exits full-screen mode for 10 seconds or more (single or cumulative duration)
+
+**How to review**
+
+<Frame>
+  <img src="/images/review-integrity-issues-in-proctor-mode/0f2078f46a04c028.gif" alt="image" />
+</Frame>
+
+1. Open the **Summary Report** for the candidate.
+1. Go to **Integrity Summary**.
+1. Expand **Candidate switched tabs** or **Candidate exited full-screen mode **to view flagged time ranges and the duration for each instance.
+1. Select a flagged time range to open the **Session Replay**.
+1. Review the screenshots captured during the flagged time range to understand what the candidate was doing while away from the test tab.
+1. Watch the test-taking tab recording to observe the candidate’s activity immediately after returning to the test.
+
+<Tip>
+**Tip:** Look for sudden, high-quality code written after the candidate returns to the test. This pattern may indicate the use of external references.
+</Tip>
+
+#### Webcam-related integrity issues
+
+If **Image Analysis** is enabled, Proctor Mode captures webcam images every 15 seconds and analyzes them using an automated model. The system flags unusual activity, such as:
+
+- The candidate’s face missing for an extended period
+- Multiple faces visible
+- Secondary faces detected
+
+**How to review**
+
+<Frame>
+  <img src="/images/review-integrity-issues-in-proctor-mode/874962178f6e5331.gif" alt="image" />
+</Frame>
+
+1. Open the **Summary Report** for the candidate.
+1. Go to **Integrity Summary**.
+1. Expand **Detected in webcam images **to view the flagged images and the timestamp of each occurrence.
+1. Select a flagged image to open it in full size.
+1. Verify that the images match the flagged integrity issue.
+
+To review the candidate’s activity in detail, open **Session replay**.
+
+#### Screenshot analysis issues
+
+Proctor Mode takes screenshots every 15 seconds and analyzes them using an automated model. The system flags any screenshot that appears to show unauthorized tools or applications.
+
+**How to review**
+
+<Frame>
+  <img src="/images/review-integrity-issues-in-proctor-mode/8b7c27e7368fb669.gif" alt="image" />
+</Frame>
+
+1. Open the **Summary Report** for the candidate.
+1. Go to **Integrity Summary**.
+1. Expand **Detected in screenshots **to view the flagged screenshots
+
+  along with the following information:
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+1. Select a flagged screenshot to open it in full size.
+1. Verify whether the screenshot shows an unauthorized tool or application.
+
+To review the candidate’s activity in detail, open **Session replay**.
+
+#### Object detection in webcam feed
+
+Proctor Mode detects and flags mobile phones and tablets in the candidate’s webcam feed during an assessment.
+
+**How to review**
+
+<Frame>
+  <img src="/images/review-integrity-issues-in-proctor-mode/6cea72521c107a64.gif" alt="image" />
+</Frame>
+
+1. Open the **Summary Report** for the candidate.
+1. Go to **Integrity Summary**.
+1. Expand **Detected in webcam images** to view flagged images and timestamps.
+1. Select a flagged image to open it in full size.
+1. Verify whether a mobile phone or tablet is visible in the image.
+
+To review the activity in detail, open **Session Replay**.
+
+#### Conversation detection in the code editor
+
+Proctor Mode detects patterns where candidates type and delete content in the editor. This behavior may indicate external communication. The system flags such activity for review as potential external assistance.
+
+**How to review**
+
+<Frame>
+  <img src="/images/review-integrity-issues-in-proctor-mode/0eaa251e4c949e22.gif" alt="image" />
+</Frame>
+
+1. Open the **Summary Report** for the candidate.
+1. Go to **Integrity Summary**.
+1. Expand **Detected conversation in code editor** to view the flagged time ranges and the duration for each instance.
+1. Select a flagged time range to open the **Session Replay**.
+1. Review the candidate’s typing activity during the flagged duration to identify potential external communication.
+
+#### High code similarity
+
+HackerRank reviews the code submitted by the candidate to detect high similarity with another candidate’s submission. Proctor Mode flags a question when the candidate’s submission is highly similar to one or more other candidates’ solutions, indicating potential plagiarism.
+
+**How to review**
+
+<Frame>
+  <img src="/images/review-integrity-issues-in-proctor-mode/86623a1bce916341.gif" alt="image" />
+</Frame>
+
+1. Open the **Summary Report** for the candidate.
+1. Go to **Integrity Summary**.
+1. Expand **Detected code similarity with other submissions** to view the affected question and the similarity percentage.
+1. Select the flagged item to open the side-by-side code comparison.
+1. Compare the submissions to determine whether the similarity is legitimate or suspicious.
+1. (Optional) Click **Go to Detailed Report** to review additional context.

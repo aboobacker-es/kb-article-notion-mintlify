@@ -1,0 +1,51 @@
+---
+title: "REPL [ Read — Eval — Print — Loop]"
+description: "REPL is an “interactive” environment that helps debug and evaluate blocks of code by executing them in realtime."
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+REPL is an “interactive” environment that helps debug and evaluate blocks of code by executing them in realtime.
+
+To understand what REPL is, let's see how a programmer codes without REPL or any other debugging tools.
+
+<Frame>
+  <img src="/images/repl-read-eval-print-loop/fcfab4fd241b2e81.bin" alt="image" />
+</Frame>
+
+Here, the programmer keeps modifying the code and repeats the entire process until they arrive at the final working code.
+
+Now with REPL, this is how it looks.
+
+<Frame>
+  <img src="/images/repl-read-eval-print-loop/2985a2689fde0fc7.bin" alt="image" />
+</Frame>
+
+Here, the programmer keeps trying out blocks of code to verify its correctness and goes ahead and writes the working code every time.
+
+Using REPL, programmers save a lot of time by running and debugging blocks of code which is much better than running an entire program and verifying its correctness. During the coding process, the read–eval–print loop involves the programmer more frequently than the classic edit-compile-run-debug cycle.
+
+To know how REPL works, take a look at how a Python programmer uses REPL to write a program to add 2 numbers.
+
+<Frame>
+  <img src="/images/repl-read-eval-print-loop/f824d89c64f533c4.bin" alt="image" />
+</Frame>
+
+As you can see, the programmer tries running the **add2Numbers(a,b) **function with multiple cases to ensure correctness.
+
+Read Eval Print Loop, as its name suggests supports the following:
+
+- **Read — Read user input in realtime**
+- **Eval — Evaluate blocks of code**
+- **Print — Prints result to the user**
+- **Loop — Repeat code using loops**
+
+Since REPL loads the functions and variables into memory, it also supports autocompleting the function using \<Tab\> key.
+
+REPL is officially supported for interpreted programming languages like **Python**, **Javascript**, and **Ruby**.[ ](https://www.baeldung.com/java-9-repl)[**Java9**](https://www.baeldung.com/java-9-repl) and[ ](https://swift.org/lldb/)[**Swift5**](https://swift.org/lldb/) have also launched official REPL support in the last few years. For other programming languages, there are third-party REPL’s which can be used.

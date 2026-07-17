@@ -1,0 +1,91 @@
+---
+title: "Optimality"
+description: "This feature is part of the AI Add-on. For more information, see 📄 Advanced Evaluation."
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+This feature is part of the AI Add-on. For more information, see [📄 Advanced Evaluation](https://app.notion.com/docs/3147b674-5cbb-4bde-9528-7699bb64b1a7/articles/77cf8e0b-57e1-498f-9c64-9526abcb1170).
+
+Optimality Evaluation enables hiring teams to assess whether a candidate’s solution aligns with the expected time and space complexity. It enables you to distinguish between brute-force and optimized approaches.
+
+This feature evaluates the performance and scalability of candidate code, aligning test evaluations closer to real-world engineering expectations.
+
+## How it works
+
+When you enable **Advanced Evaluation** at the company level, **Optimality Evaluation** automatically applies to supported Coding questions. The system analyzes the candidate’s solution to determine its time and space complexity.
+
+**Note:** The candidate experience remains unchanged. Candidates take the test as usual.
+
+## Set up Optimality Evaluation
+
+To set up Optimality Evaluation:
+
+1. Enable **Advanced Evaluation**. For more information, see [Enable Advanced Evaluation](https://support.hackerrank.com/articles/7098008997-advanced-evaluation#enable-advanced-evaluation-6).
+1. Use a **Coding** question. Optimality Evaluation supports only the Coding question type.
+1. For custom questions, add the following in the **Interview Guidelines** section:
+
+  <Frame>
+    <img src="/images/optimality/e1e6c954f26e65bf.png" alt="image" />
+  </Frame>
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  **Note**: HackerRank Library questions already include this configuration by default.
+
+Once configured, **Optimality Evaluation** automatically applies to the question when used in a test with **Advanced Evaluation** enabled.
+
+## View Optimality insights in reports
+
+Optimality insights appear in candidate test reports.
+
+To view Optimality insights:
+
+1. Log in to your **HackerRank for Work** account using your credentials.
+1. Go to the **Tests** tab.
+1. Open the test you want to review.
+1. Go to the **Candidates** tab.
+1. Click a candidate's name to open the** Summary Report**.
+
+  The **Summary Report** shows an **Optimality** column for each Coding question.
+
+  <Frame>
+    <img src="/images/optimality/33749c5dbaa9a260.png" alt="image" />
+  </Frame>
+1. Scroll to the relevant Coding question and then click it to open the **Detailed Report**.
+
+  The **Detailed Report** includes an **Optimality** section for each coding question under the **Candidate Evaluation** tab, with an explanation of the time and space complexities.
+
+  <Frame>
+    <img src="/images/optimality/7bb850a1790bb521.png" alt="image" />
+  </Frame>
+
+## Frequently Asked Questions (FAQs)
+
+**Which question types support Optimality Evaluation?**
+
+Optimality Evaluation currently supports only Coding questions.
+
+**Why doesn’t the report show ideal optimality for some Coding questions?**
+
+The system shows ideal Optimality only when the question includes clearly defined ideal time and space complexities. If the question lacks this information, the report does not display Ideal Optimality.
+
+**How do I enable Optimality Evaluation for my own questions after it is enabled in company settings?**
+
+Add the time and space complexity to the **Interview Guidelines** section of your custom or existing Coding question. The system uses these values to run Optimality Evaluation.
+
+**How does HackerRank determine the optimality?**
+
+The system derives optimality from the values defined in the **Interview Guidelines**. If the complexities are not defined, the system cannot evaluate candidate submissions against a benchmark.
+
+**How does HackerRank validate the correctness of the Optimality scoring?**
+
+HackerRank validates Optimality Evaluation using a predefined dataset that includes a wide range of complexity levels. For more information on validation or evaluation methodology, contact support@hackerrank.com.

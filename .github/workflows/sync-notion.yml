@@ -1,0 +1,46 @@
+name: Sync Notion → Mintlify
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # every 30 minutes
+  workflow_dispatch:          # allow manual trigger from the Actions tab
+
+concurrency:
+  group: notion-sync
+  cancel-in-progress: false
+
+permissions:
+  contents: write             # needed to commit MDX + images back to the repo
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r sync/requirements.txt
+
+      - name: Run sync
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+        run: python -m sync.sync
+
+      - name: Commit and push changes
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "notion-sync-bot"
+          git config user.email "notion-sync-bot@users.noreply.github.com"
+          git add docs/ images/ docs.json .sync-state.json
+          COUNT=$(git status --porcelain | wc -l | tr -d ' ')
+          git commit -m "sync: ${COUNT} file(s) updated from Notion"
+          git push

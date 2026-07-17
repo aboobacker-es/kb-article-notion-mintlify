@@ -1,0 +1,186 @@
+---
+title: "Proctor Mode"
+description: "This feature is part of the AI Add-on. For more information, see 📄 HackerRank AI Add-on."
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+This feature is part of the AI Add-on. For more information, see [📄 HackerRank AI Add-on](https://app.notion.com/docs/3147b674-5cbb-4bde-9528-7699bb64b1a7/articles/8704fb40-5ded-4188-b5a6-cfd653d0f5c9).
+
+Proctor Mode is an AI-powered feature that simulates live human proctoring to help ensure test integrity without the complexity of manual oversight. It monitors candidate behavior during remote technical assessments and provides detailed post-test reports to support fair, data-driven hiring decisions.
+
+While traditional human proctoring offers strong integrity controls, it is difficult to scale. Proctor Mode delivers a scalable alternative by replicating human-like supervision across large candidate pools.
+
+With Proctor Mode, you can:
+
+- Set clear expectations upfront by showing candidates the test rules and guidelines before they begin.
+- Monitor for violations during the test, including behaviors such as tab switching, use of unauthorized tools, face detection anomalies, object detection in the webcam feed, or conversation patterns in the code editor, and intervene when necessary.
+- Review a smart, human-like test report that highlights integrity issues through a clear summary and an in-depth session replay with labeled screenshots and flagged events.
+
+## Enable Proctor Mode
+
+To use Proctor Mode in tests, you must enable it at both the **Company **level and the **Test** level.
+
+To enable Proctor Mode:
+
+### Step 1: Enable Proctor Mode in Company Settings
+
+1. Log in to your **HackerRank for Work** account using your credentials.
+1. Go to **Settings \> Test Settings**.
+1. In the **Test Integrity** section, turn on **Proctor Mode**.
+
+  <Frame>
+    <img src="/images/proctor-mode/2830a025379d455a.png" alt="image" />
+  </Frame>
+1. In the confirmation dialog box, click **Agree & Enable**.
+1. Click **Save Changes**.
+
+### Step 2: Enable Proctor Mode at the test level
+
+1. Go to the **Tests** tab.
+1. Select the test you want to configure.
+1. Go to **Settings \> Test Integrity**.
+1. Turn on the **Proctor Mode **toggle.
+
+  <Frame>
+    <img src="/images/proctor-mode/1b5d4ab88c34590d.png" alt="image" />
+  </Frame>
+1. Click **Save Changes**.
+
+<Note>
+**Note:** When Proctor Mode is enabled, **AI Plagiarism Detection** and** Image Analysis** are enabled by default. You can disable Image Analysis, but HackerRank recommends enabling it for full session integrity.
+</Note>
+
+## Proctor Mode compatibility
+
+Proctor Mode compatibility includes the following:
+
+- **Availability:** Proctor Mode is available only for tests created after the July 2025 release. You cannot enable Proctor Mode for tests created before this release. If you used Proctor Mode during the limited availability phase, those tests continue to support it.
+- **Supported question types:** Proctor Mode supports only the following question types: Coding, Approximate, Multiple Choice (MCQ), Database, Sentence Completion, Subjective, File Upload, Code Repo, Code Review, and Projects (excluding DevOps and Data Science).
+- **Locked setting: **After you publish a test and candidates start attempting it, you cannot disable Proctor Mode. To conduct the test without Proctor Mode, clone the original test and invite candidates to the new test.
+
+## How Proctor Mode works
+
+Proctor Mode replicates the stages of live proctoring through automated workflows before, during, and after the test session.
+
+Proctor Mode simulates an ideal proctoring experience by focusing on the following areas:
+
+### Before the test: Set rules and guidelines
+
+Proctor Mode starts with an onboarding flow that prepares candidates and helps prevent integrity issues:
+
+- **System compatibility and permissions: **Candidates must meet technical requirements for network stability, supported operating systems, and supported browsers. The test does not begin until all requirements are met.
+- **Consent and test rules:** Candidates review and acknowledge a list of prohibited actions, such as switching tabs or using external tools, and must give consent to proceed.
+- **Permissions: **Candidates must grant the following permissions to start the test:
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+### During the test: Monitor in real time
+
+Proctor Mode uses AI to monitor candidate behavior and flag suspicious actions in real time.
+
+- **Full-screen enforcement and tab monitoring: **Attempts to exit full-screen mode or switch browser tabs are automatically flagged and logged.
+
+  <Frame>
+    <img src="/images/proctor-mode/26ac47825fb66ed4.gif" alt="image" />
+  </Frame>
+- **Webcam monitoring: **AI continuously monitors candidate presence. If the candidate is not visible or multiple faces are detected, a warning appears and the event is recorded.
+
+  <Frame>
+    <img src="/images/proctor-mode/d627a68f32c2bd29.png" alt="image" />
+  </Frame>
+- **Object detection in webcam feed**: Detects and flags mobile phones and tablets in the candidate’s webcam feed. It captures images with the detected objects and adds them to the report for review.
+- **Multiple monitor detection:** The platform continuously verifies that only one monitor remains connected. It flags any new monitor connections made during the test.
+
+  <Frame>
+    <img src="/images/proctor-mode/55a9a2dde8c140da.gif" alt="image" />
+  </Frame>
+- **Session screenshots: **Screenshots of the candidate’s system are captured periodically to detect unauthorized software or external resources.
+- **Conversation detection in the code editor**: Detects patterns where candidates type and delete content in the editor that may indicate external communication. Such activity is flagged for review as potential external assistance.
+- **Copy-paste restrictions:** Copy-paste functionality is disabled to prevent pasting content from external sources into the editor.
+
+### After the test: Generate post-test integrity report
+
+Proctor Mode generates summary and detailed reports that help you assess candidate behavior and overall test integrity.
+
+#### Summary report
+
+The summary report offers a concise overview of the session, including:
+
+- Indication of whether integrity issues occurred
+- Integrity summary
+
+#### Integrity results
+
+Proctor Mode assigns a final integrity result of **High** or **Medium** based on the severity of detected issues.
+
+**Tests without candidate personal information**
+
+When a test does not capture candidate personal information (such as webcam images), Proctor Mode evaluates integrity in the following three areas:
+
+- **Proctor Mode rules**: Check whether a candidate violates Proctor Mode rules. For example, exiting full-screen mode, switching tabs, or leaving the test window.
+- **Screenshots**: Reviews periodic screen captures for suspicious activity during the candidate session.
+- **Code Similarity:** Compares the code submitted by a candidate with the code submitted by other candidates.
+
+The** Integrity Summary **provides a consolidated view of all detected integrity signals for a candidate. It lets you preview issues and drill down into supporting evidence within the same section.
+
+<Frame>
+  <img src="/images/proctor-mode/95fd92c0a369e708.gif" alt="image" />
+</Frame>
+
+The** Session Replay** provides a timeline-based, video-style view of the test session. It includes the following features:
+
+<Frame>
+  <img src="/images/proctor-mode/d6b14fcf52b57782.gif" alt="image" />
+</Frame>
+
+- Recording of the candidate’s test session across the full browser screen
+- Lists all critical test events, including integrity events. You can search for events and click any event to jump to the corresponding timestamp in the recording.
+- Displays a synchronized timeline with test activity and screenshots by timestamp.
+- Analyzes screenshots automatically and highlights suspicious activity.
+
+**Tests with candidate personal information**
+
+When a test includes candidate personal information (such as webcam images), Proctor Mode evaluates the same three areas as **tests without candidate personal information** and also analyzes webcam images for potential violations, such as the candidate’s face missing for an extended period, multiple faces visible, or secondary faces detected.
+
+The** Integrity Summary **provides a consolidated view of all detected integrity signals for a candidate, including issues detected in webcam analysis. It lets you preview issues and drill down into supporting evidence within the same section.
+
+<Frame>
+  <img src="/images/proctor-mode/840a67765b3d3423.gif" alt="image" />
+</Frame>
+
+The **Session Replay** for these tests includes all the features available for **tests without candidate personal information**, along with the following additional capabilities:
+
+- Captures webcam images every five seconds.
+- Captures screenshots every 15 seconds and increases frequency around integrity violations to provide contextual evidence.
+- Displays a synchronized timeline with webcam images.
+
+<Note>
+**Note:**
+</Note>
+
+#### Screenshot analysis
+
+The system prompts candidates to share their entire screen. The platform captures screenshots every 15 seconds. When the system detects suspicious activity such as window switching or exiting full-screen mode, it reduces the capture interval to five seconds.
+
+The system uses a model to analyze screenshots and detect unauthorized tools, including:
+
+- Tutorial websites, answer-sharing platforms, or GitHub repositories hosting leaked solutions.
+- External AI coding assistants, such as third-party AI tools or copilots, not integrated within HackerRank’s IDE.
+- Specialized browser extensions or invisible overlay applications that assist in answering coding questions.
+- Collaboration tools, such as video conferencing, messaging, or remote desktop applications.
+- Question-leaking tools, such as screen recorders or screenshot applications running in the background.
+
+The system classifies each screenshot as **suspicious** or **not suspicious** and provides an explanation for any detected issues or tools. All suspicious screenshots appear highlighted in the Session Replay and on the candidate’s attempt timeline.

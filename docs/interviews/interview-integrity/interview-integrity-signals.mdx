@@ -1,0 +1,105 @@
+---
+title: "Interview Integrity Signals"
+description: "Interview Integrity Signals notify interviewers only when the system detects meaningful clusters of suspicious candidate activity, such as multiple copy-paste…"
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+Interview Integrity Signals notify interviewers only when the system detects meaningful clusters of suspicious candidate activity, such as multiple copy-paste actions, frequent window resizing, and switching tabs. This grouped notification approach minimizes distractions and ensures that interviewers receive only critical alerts, helping them stay focused during the interview. To learn about the types of supported signals, see[ Types of Suspicious Signals](https://support.hackerrank.com/articles/5161582600-interview-integrity-signals#types-of-suspicious-signals-11).
+
+The Interview Integrity Signals supports the following question types:
+
+- Coding
+- Projects
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+- Code Repository
+- Whiteboard
+
+## Enabling Interview Integrity Signals
+
+To enable Interview Integrity Signals:
+
+1. Log in to your **HackerRank for Work** account using your credentials.
+1. Go to **Settings**.
+1. Select** Interview Settings** from the left panel under the **Company** section.
+1. Scroll to the **Interview Integrity Signals** section.
+
+  <Frame>
+    <img src="/images/interview-integrity-signals/4ce4785bd8b63f1d.png" alt="image" />
+  </Frame>
+1. In the **Interview Integrity Signals** section:
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+1. Click **Save**.
+
+## How it works
+
+During an interview, the system detects suspicious behavior such as multiple copy-paste actions or frequent window resizing, and groups these events into a comprehensive alert. This avoids distracting the interviewer with multiple notifications.
+
+For example, the system displays an alert: **Multiple Suspicious Activities**.
+
+When the interviewer clicks the alert, they see a list of specific behaviors, such as:
+
+- Multiple copy-paste actions
+- Frequent window resizing
+- Repeated tab switching
+
+Interviewers can ask the candidate to share their screen for further review. If the candidate uses unauthorized tools or browser tabs, the interviewer can address the issue directly, ensuring a secure and transparent interview environment.
+
+<Note>
+**Note: **You can also keep the **Suspicious Signals **panel open to view integrity signals in real time as candidate activity occurs.
+</Note>
+
+## Types of suspicious signals
+
+The system groups the following types of suspicious signals into alerts:
+
+<Frame>
+  <img src="/images/interview-integrity-signals/900b996c24cef49a.png" alt="image" />
+</Frame>
+
+- **Out of Interview:** Candidate switches away from the coding environment to another browser tab. This behavior may indicate the use of external resources or tools during the interview. You can expand Out-of-interview events in the timeline to view each occurrence, including timestamp and duration.
+
+  <Frame>
+    <img src="/images/interview-integrity-signals/d37cd9acddfa0498.gif" alt="image" />
+  </Frame>
+
+  <Note>
+  **Note:** Actions such as opening the browser console or interacting with permission pop-ups may also trigger this signal, as they operate outside the coding environment.
+  </Note>
+- **Copy Paste:** The candidate copies and pastes content from an external source into the code editor. This helps identify potential cases where candidates use pre-written answers or external assistance.
+
+  <Note>
+  **Note:** Copying and pasting code does not always indicate misconduct. Candidates may copy content from forums, AI tools, or personal editors, which may be acceptable in certain contexts.
+  </Note>
+- **Window Resize:** Candidate resizes the browser window during the interview. This action may suggest attempts to access or conceal other applications or content.
+- **Multi-Monitor Setup:** The candidate uses an extended or dual-monitor setup during the interview. If the candidate grants display access, the platform can detects when additional displays are connected or disconnected and records these events in the timeline for review.
+
+  <Frame>
+    <img src="/images/interview-integrity-signals/f1518f75516b95dc.gif" alt="image" />
+  </Frame>
+
+  If the candidate does not grant display access, HackerRank notifies the interviewer.
+
+  <Frame>
+    <img src="/images/interview-integrity-signals/a411b939bab3f8b5.png" alt="image" />
+  </Frame>
+
+  <Note>
+  **Note:** This feature is supported only on the Chrome browser.
+  </Note>

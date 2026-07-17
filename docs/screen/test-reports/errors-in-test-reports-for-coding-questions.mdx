@@ -1,0 +1,94 @@
+---
+title: "Errors in Test Reports for Coding Questions"
+description: "This guide has been developed to help you understand various errors and warnings that may appear in coding questions in Summary and Detailed Post-Assessment Re…"
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+This guide has been developed to help you understand various errors and warnings that may appear in coding questions in Summary and Detailed Post-Assessment Reports.
+
+### No answer was submitted for this question. Showing compiled/saved versions
+
+- You will see this message if candidates never run their code or tests.
+- The system will treat it as if the candidate didn’t attempt the question.
+
+**Note: **If you still want to see the candidate's final code when submitting the test or when the time expires, you can manually run it to see how it performs.
+
+<Frame>
+  <img src="/images/errors-in-test-reports-for-coding-questions/9e513afe213768da.bin" alt="image" />
+</Frame>
+
+### No code was submitted. The last compiled version is displayed to the user
+
+- You will see this message if a candidate has run their code or run tests but never hits submit on the question.
+
+**Note: **When the test submission or the test timer expires, the system will run the latest version of the candidate’s code and use that to score the question.
+
+<Frame>
+  <img src="/images/errors-in-test-reports-for-coding-questions/6ae2c2da5038cf27.bin" alt="image" />
+</Frame>
+
+### Terminated due to timeout
+
+- Each language has limitations for how long the candidate’s code can take to run test cases.
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+- Candidates will also see this when running the test cases during the assessment.
+
+**Note: **Our [Execution Environment Samples ](https://candidatesupport.hackerrank.com/hc/en-us/articles/4402913877523-Execution-Environment-and-Samples)Candidate Support Page article lists all the languages and their respective limits.
+
+<Frame>
+  <img src="/images/errors-in-test-reports-for-coding-questions/7be0c55544873df8.bin" alt="image" />
+</Frame>
+
+### Access denied
+
+- This is seen when someone tries to access a candidate report to which they do not have access.
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+**Want to know more about team management and permissions? **Check out our support page articles covering [Teams Management](https://support.hackerrank.com/hc/en-us/sections/115002458528-Teams-Management).
+
+<Frame>
+  <img src="/images/errors-in-test-reports-for-coding-questions/dbefc90ad5d692ea.png" alt="image" />
+</Frame>
+
+### Playback not present
+
+- Keystroke tracking is a feature that was released as part of a report UI update.
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+<Frame>
+  <img src="/images/errors-in-test-reports-for-coding-questions/47c79ace985d0701.bin" alt="image" />
+</Frame>
+
+### Runtime Error
+
+In some situations, you will see “Runtime Error” as the status of a test case in the candidate report.
+
+<Frame>
+  <img src="/images/errors-in-test-reports-for-coding-questions/652a81f8524b5599.bin" alt="image" />
+</Frame>
+
+At a high level, the Runtime Error means the candidate's code wasn't able to run properly because of an error in their code.
+
+Below are two examples that could come up in the test cases, but there are many other situations this error may show up.
+
+In the first example, this is a Python error where something in their code is being converted to an integer, but the value they passed in, in this case, the word '99.95', is giving an error. This is a common error with a few ways to fix it, and the candidate would see the “ValueError” in the test cases during their assessment, which lets them know the test case isn’t passing and it’s due to this error which they have to fix.
+
+<Frame>
+  <img src="/images/errors-in-test-reports-for-coding-questions/66e861b130848340.bin" alt="image" />
+</Frame>
+
+The second example says the function "get_command_results" expects two specific arguments, but the candidate's code hasn't passed them into the function, so the code cannot run. Like the above, the candidate would be aware of this during the test and should take the proper steps to fix the errors.
+
+<Frame>
+  <img src="/images/errors-in-test-reports-for-coding-questions/b054e4288007127a.bin" alt="image" />
+</Frame>

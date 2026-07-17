@@ -1,0 +1,86 @@
+---
+title: "Legacy Candidate Site Deprecation FAQs"
+description: "The FAQ below addresses questions related to the deprecation of the legacy candidate site."
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+The FAQ below addresses questions related to the deprecation of the legacy candidate site.
+
+<Accordion title="**Why is the legacy candidate site being deprecated?**">
+The legacy candidate site has been in maintenance mode for more than six years and no longer receives security updates.
+
+The image below shows the legacy candidate site.
+
+<Frame>
+  <img src="/images/legacy-candidate-site-deprecation-faqs/fe4b30af0892720c.png" alt="image" />
+</Frame>
+
+HackerRank introduced the current candidate site in 2019, and it has served as the default experience since then.
+
+Today, fewer than 0.01% of test attempts use the legacy site. These attempts rely on a small set of outdated question types and test settings that have modern replacements.
+
+Deprecating the legacy site allows HackerRank to focus on improving the current candidate experience, including enhanced security, advanced integrity features, and ongoing feature enhancements.
+</Accordion>
+
+<Accordion title="**Who is affected?**">
+A small number of tests that use legacy question types or settings are affected.
+
+If your account is affected, HackerRank sends you a direct email with the list of tests and questions that require migration. You also see an in-product banner on the affected test and question pages.
+
+If you do not receive a notification, your tests already use the current candidate site, and you do not need to take any action.
+</Accordion>
+
+<Accordion title="**Why do some tests still use the legacy candidate site?**">
+A test uses the legacy candidate site when it includes one or more legacy settings or question types that are not supported on the current candidate site.
+
+Many of these question types and settings were introduced before HackerRank supported newer development environments and richer assessment experiences. Modern question types, such as Fullstack questions with a VS Code–based IDE, provide a better candidate experience and generate more meaningful evaluation signals.
+</Accordion>
+
+<Accordion title="**What happens when candidates try to take a deprecated test?**">
+Starting July 31, 2026, candidates cannot start a deprecated test if they receive an invitation after the invitation block takes effect. Instead, they see a message stating that the test is no longer available and advising them to contact their recruiter for an updated assessment link.
+
+Candidates who receive an invitation before July 31, 2026, can continue to access and complete their test attempt.
+</Accordion>
+
+<Accordion title="**How do I migrate affected tests and questions?**">
+  - **Legacy Project questions:** Create a new question using Fullstack or Backend question types.
+  - **Multi-File HTML/CSS/JS questions:** Recreate the question using the single-file HTML/CSS/JS format or the Frontend question type.
+
+HackerRank recommends creating new questions using supported question types instead of updating existing legacy questions.
+</Accordion>
+
+<Accordion title="**Can I clone an affected test to preserve it?**">
+No. Starting July 31, 2026, you cannot clone tests that contain deprecated question types or settings. To avoid disruption, migrate affected tests and questions before the deprecation date.
+</Accordion>
+
+<Accordion title="**How long do I have to migrate?**">
+Complete all required migrations by **June 30, 2026**. After this date, deprecated tests become subject to the migration and deprecation timeline.
+</Accordion>
+
+<Accordion title="**What if I need help with migration?**">
+Contact support@hackerrank.com for assistance.
+
+To help us investigate more quickly, include the migration notification email you received. The email contains the list of affected tests and questions in your account.
+</Accordion>
+
+<Accordion title="**Can I add a legacy question to a test after the deprecation takes effect?**">
+After the deprecation takes effect, you cannot add legacy question types to new or existing tests.
+
+Legacy questions no longer appear as available options when you create or edit a test.
+</Accordion>
+
+<Accordion title="**What if I no longer need an affected test?**">
+If you no longer use an affected test, no action is required. HackerRank automatically archives deprecated tests as part of the deprecation process.
+
+If you still need the assessment, we recommend one of the following options:
+
+  - Create a new test using supported question types.
+  - Direct candidates to a newer test that already exists in your account.
+</Accordion>

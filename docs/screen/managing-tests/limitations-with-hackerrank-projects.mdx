@@ -1,0 +1,73 @@
+---
+title: "Limitations With HackerRank Projects"
+description: "The project questions on HackerRank use VM-based containers, with specific limitations on the number of workspaces a company can have at any given time."
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+The project questions on HackerRank use VM-based containers, with specific limitations on the number of workspaces a company can have at any given time.
+
+**Limitations by Question Type:**
+
+- **Logins per Minute:** The maximum number of candidates who can log into a test from a company in any given minute.
+- **Workspace:** A container assigned to a project question. Each project question uses one independent workspace.
+- **Concurrent Workspaces:** The total number of containers a company can utilize simultaneously.
+
+|   |   |   |
+|---|---|---|
+| **Question Type** | **Logins Per Minute** | **Concurrent Workspaces** |
+| Front-end | 500 | 10000 |
+| Back-end | 500 | 10000 |
+| Full-stack | 500 | 10000 |
+| Data Science | 500 | 10000 |
+| DevOps | 500 | 10000 |
+| MCQ |   | 20000 |
+| Coding |   | 20000 |
+
+**Example**
+
+If a test includes two project questions:
+
+- **Maximum Logins**: 50 candidate logins per minute.
+- **Simultaneous Test takers**: Up to 500 candidates.
+- **Concurrent Workspaces**: 1000 concurrent workspaces (each candidate will utilize two workspaces (one for each project question)
+
+### Candidate Experience
+
+Generally, candidates can log in without any issues. However, if the limits are exceeded, they will experience the following when:
+
+**1. Logins per Minute are at Capacity: **When login capacity is reached, candidates will see a message indicating their login is temporarily throttled. A countdown will replace the "**Try Again**" button, and candidates will be provisioned on servers once it finishes.
+
+<Frame>
+  <img src="/images/limitations-with-hackerrank-projects/355dfa0788f478f0.bin" alt="image" />
+</Frame>
+
+**2. Concurrent Workspaces are at Capacity: **If the concurrent workspace limit is exceeded, the remaining candidates will see an error message: "Our servers are at capacity. Please try to take this test after some time." As candidates complete their attempts, new candidates will be allowed to log in.
+
+<Frame>
+  <img src="/images/limitations-with-hackerrank-projects/9638c85761623571.bin" alt="image" />
+</Frame>
+
+<Note>
+**Note:**
+</Note>
+
+#### **Related Articles:**
+
+- [Creating a HackerRank Project Question](https://kb.hackerrank.com/articles/1570281449-creating-front-end%2C-back-end-full-stack-and-mobile-questions)
+- [Front-end, Back-end, and Full Stack Developer](https://kb.hackerrank.com/articles/1570281449-creating-front-end%2C-back-end-full-stack-and-mobile-questions)
+- [Data Science](https://kb.hackerrank.com/articles/5187107609-data-science-questions)
+- [Database Engineer](https://kb.hackerrank.com/articles/8826242281-database-engineer-questions)
+- [Code Review](https://kb.hackerrank.com/articles/4262355406-code-review-questions)
+- [Mobile Development](https://kb.hackerrank.com/articles/1570281449-creating-front-end%2C-back-end-full-stack-and-mobile-questions)
+- [Scoring Front end, Back end, and Full-stack Questions](https://kb.hackerrank.com/articles/4110011178-scoring-front-end%2C-back-end-and-full-stack-questions)
+- [Manual Scoring of Data Science Questions](https://kb.hackerrank.com/articles/1079079701-manual-scoring-of-data-science-questions-)
+- [Auto Scoring of Data Science Questions](https://kb.hackerrank.com/articles/8932030959-automatic-scoring-of-data-science-questions)
+- [Taking Front-end, Back-end, Full-Stack Developer assessments](https://candidatesupport.hackerrank.com/hc/en-us/articles/4402921107091-Taking-Front-end-Back-end-Full-stack-developer-assessments)
+- [Blog](https://www.hackerrank.com/blog/hackerrank-projects-supports-data-science-skills/)

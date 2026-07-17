@@ -1,0 +1,94 @@
+---
+title: "Send Bulk Email Invites"
+description: "The Bulk Invite feature allows you to send test invitations to many candidates at once using a CSV file."
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+The Bulk Invite feature allows you to send test invitations to many candidates at once using a CSV file.
+
+- **CSV file requirements: **Before you upload the CSV file, ensure that it meets the following requirements:
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+- **CSV content formats: **You can include only email addresses or both names and email addresses in your CSV file.
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+<Note>
+**Note:** If you include candidate names in the CSV file, you can personalize invitations by using the Candidate Name placeholder. The system automatically replaces the placeholder with the candidate’s name from your file.
+</Note>
+
+## Sending bulk email invites
+
+To send bulk email invites:
+
+1. Log in to your **HackerRank for Work** account using your credentials.
+1. Go to the **Tests** tab.
+1. Open the test from which you want to invite candidates.
+1. Click **Invite** in the upper-right corner.
+
+  <Frame>
+    <img src="/images/send-bulk-email-invites/bc6bd42b536f4bb2.png" alt="image" />
+  </Frame>
+1. In the **Send Test Invites** page, click the upload button next to the **To** field.
+
+  <Frame>
+    <img src="/images/send-bulk-email-invites/83bc94a4a464d706.png" alt="image" />
+  </Frame>
+1. Click **Upload CSV**.
+
+  <Frame>
+    <img src="/images/send-bulk-email-invites/eaea8d00b099c237.png" alt="image" />
+  </Frame>
+1. Select and upload the CSV file. The email addresses from the file appear in the **To** field.
+
+  <Frame>
+    <img src="/images/send-bulk-email-invites/0800a3522ed7a6e5.png" alt="image" />
+  </Frame>
+1. Click **Send Invites**.
+
+  <Frame>
+    <img src="/images/send-bulk-email-invites/d09dcc1ef2ab09e6.png" alt="image" />
+  </Frame>
+
+<Note>
+**Note**:
+</Note>
+
+## Troubleshooting bulk invite errors
+
+When you upload a CSV file, the system automatically validates the entries. If the file contains invalid invitations, an error message appears.
+
+<Frame>
+  <img src="/images/send-bulk-email-invites/4236944c63d721b8.png" alt="image" />
+</Frame>
+
+Select **Resolve** to view a list of all invalid invites with details such as the number of invalid invites and reasons for invalid email invites.
+
+<Frame>
+  <img src="/images/send-bulk-email-invites/bcc6f2898e20b3af.png" alt="image" />
+</Frame>
+
+You may encounter the following errors:
+
+- **Previously invited:** Candidates who already received an invitation cannot be included in the CSV upload.
+
+  To troubleshoot, click **Re-invite** candidates to send another invite, or remove these candidates from the CSV file.
+- **Incorrect email structure:** An email address does not follow the correct format.
+
+  To troubleshoot, correct the email address using a valid format, such as `name@example.com` or `Name<name@example.com>`.
+- **Duplicate emails:** The same email address appears more than once in the CSV.
+
+  To troubleshoot, remove duplicate email addresses from the CSV file before uploading it again.

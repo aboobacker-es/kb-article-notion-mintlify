@@ -1,0 +1,44 @@
+---
+title: "Hide Question Title"
+description: "You can enhance test integrity by hiding question titles from candidates during an assessment. When you enable this feature, candidates cannot view the origina…"
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+You can enhance test integrity by hiding question titles from candidates during an assessment. When you enable this feature, candidates cannot view the original titles of questions in a test. This reduces the risk of online answer searches.
+
+**Note: **The Hide Question Title feature is disabled by default. You must manually enable it for each test.
+
+## Enabling Hide Question Title
+
+To enable Hide Question Title:
+
+1. Log in to your **HackerRank for Work** account using your credentials.
+1. Go to the **Tests** tab.
+1. Open the test you want to hide the question title.
+1. Go to** Settings \> Questions.**
+1. Turn on the **Hide Question Title **toggle.
+
+  <Frame>
+    <img src="/images/hide-question-title/815e347088c8405e.png" alt="image" />
+  </Frame>
+1. Click **Save Changes**.
+
+**Note:** The changes apply to all questions in the test.
+
+## Candidate experience
+
+When you hide question titles:
+
+<Frame>
+  <img src="/images/hide-question-title/4f4e8fea9cd16b62.png" alt="image" />
+</Frame>
+
+- Candidates do not see the original titles for any questions.
+- Questions appear with generic labels such as Question 1, Question 2, and so on.

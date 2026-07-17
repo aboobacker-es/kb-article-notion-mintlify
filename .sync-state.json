@@ -1,0 +1,754 @@
+{
+  "pages": {
+    "372a50e0dca380068938c22583cc0e18": {
+      "git_path": "docs/screen/managing-tests.mdx",
+      "last_edited_time": "2026-06-09T05:57:00.000Z",
+      "title": "Managing Tests"
+    },
+    "372a50e0dca380089c79e9f6c4b47578": {
+      "git_path": "docs/screen/managing-tests/grant-test-access.mdx",
+      "last_edited_time": "2026-06-22T07:17:00.000Z",
+      "title": "Grant Test Access"
+    },
+    "372a50e0dca38009bf07deb4ddce1cef": {
+      "git_path": "docs/screen/frequently-asked-questions/how-can-i-cancel-a-test-invite.mdx",
+      "last_edited_time": "2026-06-01T16:32:00.000Z",
+      "title": "How Can I Cancel a Test Invite?"
+    },
+    "372a50e0dca3800a9e10e287d586eb3b": {
+      "git_path": "docs/screen/frequently-asked-questions/when-i-edit-a-live-test-when-will-the-edits-take-effect-for-the-candidates.mdx",
+      "last_edited_time": "2026-06-03T11:59:00.000Z",
+      "title": "When I edit a live test, when will the edits take effect for the candidates?"
+    },
+    "372a50e0dca3800d89f3df6c972ecb62": {
+      "git_path": "docs/screen/test-settings/configure-email-settings-for-tests.mdx",
+      "last_edited_time": "2026-06-01T16:14:00.000Z",
+      "title": "Configure Email Settings for Tests"
+    },
+    "372a50e0dca3800db2f8ef5711bd8e89": {
+      "git_path": "docs/screen/frequently-asked-questions/how-to-assess-kubernetes-skills-on-hackerrank.mdx",
+      "last_edited_time": "2026-06-01T16:33:00.000Z",
+      "title": "How to Assess Kubernetes Skills on HackerRank"
+    },
+    "372a50e0dca38012a2d4c5c3aa48cc6b": {
+      "git_path": "docs/screen/test-reports/plagiarism-detection-using-moss-measure-of-software-similarity.mdx",
+      "last_edited_time": "2026-06-01T16:07:00.000Z",
+      "title": "Plagiarism Detection Using MOSS (Measure of Software Similarity)"
+    },
+    "372a50e0dca38015b09ae7c47819665d": {
+      "git_path": "docs/screen/test-settings/modify-general-settings-for-tests.mdx",
+      "last_edited_time": "2026-06-01T16:12:00.000Z",
+      "title": "Modify General Settings for Tests"
+    },
+    "372a50e0dca3801b9077ea4b1b6970d9": {
+      "git_path": "docs/screen/frequently-asked-questions/how-to-assess-selenium-skills-of-a-candidate-on-hackerrank.mdx",
+      "last_edited_time": "2026-06-01T16:33:00.000Z",
+      "title": "How to Assess Selenium Skills of a Candidate on HackerRank?"
+    },
+    "372a50e0dca3801e80c7fb3576ae97c0": {
+      "git_path": "docs/screen/frequently-asked-questions/how-can-i-delete-a-question-that-i-no-longer-require.mdx",
+      "last_edited_time": "2026-06-01T16:36:00.000Z",
+      "title": "How can I delete a Question that I No Longer Require?"
+    },
+    "372a50e0dca380219d14cd26013aac77": {
+      "git_path": "docs/screen/getting-started.mdx",
+      "last_edited_time": "2026-07-14T10:25:00.000Z",
+      "title": "Getting Started"
+    },
+    "372a50e0dca3802dae35c5ac18d334b0": {
+      "git_path": "docs/screen/managing-tests/send-bulk-email-invites.mdx",
+      "last_edited_time": "2026-06-03T08:59:00.000Z",
+      "title": "Send Bulk Email Invites"
+    },
+    "372a50e0dca380358212d523176aa785": {
+      "git_path": "docs/screen/managing-tests/invite-candidates-to-a-test.mdx",
+      "last_edited_time": "2026-06-03T08:59:00.000Z",
+      "title": "Invite Candidates to a Test"
+    },
+    "372a50e0dca3803692c4f03783ed3a98": {
+      "git_path": "docs/screen/best-practice-guides/best-practices-for-screening.mdx",
+      "last_edited_time": "2026-06-01T16:27:00.000Z",
+      "title": "Best Practices for Screening"
+    },
+    "372a50e0dca3803781e1e0e27e433293": {
+      "git_path": "docs/screen/test-settings/modify-evaluation-settings-for-tests.mdx",
+      "last_edited_time": "2026-06-01T16:13:00.000Z",
+      "title": "Modify Evaluation Settings for Tests"
+    },
+    "372a50e0dca38037af2dd508fd85a29d": {
+      "git_path": "docs/screen/best-practice-guides/mitigating-candidate-drop-off.mdx",
+      "last_edited_time": "2026-06-01T16:28:00.000Z",
+      "title": "Mitigating Candidate Drop-Off"
+    },
+    "372a50e0dca38037bd72ef02c9e03fbc": {
+      "git_path": "docs/screen/managing-tests/modify-test-expiration-time.mdx",
+      "last_edited_time": "2026-06-03T08:49:00.000Z",
+      "title": "Modify Test Expiration Time"
+    },
+    "372a50e0dca3803fbb79d3dfdafa6443": {
+      "git_path": "docs/screen/test-settings/assess-candidates-in-canadian-french-language.mdx",
+      "last_edited_time": "2026-06-01T16:15:00.000Z",
+      "title": "Assess Candidates in Canadian French Language"
+    },
+    "372a50e0dca380468186c0c5fed21aa4": {
+      "git_path": "docs/screen/managing-tests/manage-sections-in-tests.mdx",
+      "last_edited_time": "2026-06-03T08:45:00.000Z",
+      "title": "Manage Sections in Tests"
+    },
+    "372a50e0dca380468c4fe30bca1b9f46": {
+      "git_path": "docs/screen/test-reports/what-is-code-quality.mdx",
+      "last_edited_time": "2026-06-01T16:07:00.000Z",
+      "title": "What is Code Quality"
+    },
+    "372a50e0dca380468c60ee910d6b6219": {
+      "git_path": "docs/screen/test-integrity.mdx",
+      "last_edited_time": "2026-06-19T10:22:00.000Z",
+      "title": "Test Integrity"
+    },
+    "372a50e0dca38048be2cf4cb36dcdb1f": {
+      "git_path": "docs/screen/best-practice-guides/best-practices-for-email-delivery-and-bounce-management.mdx",
+      "last_edited_time": "2026-06-01T16:29:00.000Z",
+      "title": "Best Practices for Email Delivery and Bounce Management"
+    },
+    "372a50e0dca3804aa5e4e7701e505677": {
+      "git_path": "docs/screen/frequently-asked-questions/how-to-download-bash-history-logs-and-session-playback-recording.mdx",
+      "last_edited_time": "2026-06-01T16:35:00.000Z",
+      "title": "How to download Bash history, logs and session playback recording?"
+    },
+    "372a50e0dca3804caf83dcff9e3fe9c9": {
+      "git_path": "docs/screen/managing-tests/manage-leaked-questions.mdx",
+      "last_edited_time": "2026-06-03T08:51:00.000Z",
+      "title": "Manage Leaked Questions"
+    },
+    "372a50e0dca3804fadc3ec05315f8446": {
+      "git_path": "docs/screen/managing-tests/download-tests-as-pdf.mdx",
+      "last_edited_time": "2026-06-01T15:42:00.000Z",
+      "title": "Download Tests as PDF"
+    },
+    "372a50e0dca380518c2ae7bad4ffe1f1": {
+      "git_path": "docs/screen/getting-started/quick-start-guide-for-recruiters.mdx",
+      "last_edited_time": "2026-06-03T08:34:00.000Z",
+      "title": "Quick Start Guide for Recruiters"
+    },
+    "372a50e0dca380568812d31530f4c6c3": {
+      "git_path": "docs/screen/frequently-asked-questions/how-to-move-questions-across-sections-in-a-test.mdx",
+      "last_edited_time": "2026-06-01T16:34:00.000Z",
+      "title": "How to Move Questions Across Sections in a Test?"
+    },
+    "372a50e0dca38056aa88fdd83cdc6f83": {
+      "git_path": "docs/screen/test-integrity/proctor-mode.mdx",
+      "last_edited_time": "2026-06-03T10:59:00.000Z",
+      "title": "Proctor Mode"
+    },
+    "372a50e0dca3805c863fe0c0153bb4a7": {
+      "git_path": "docs/screen/frequently-asked-questions/i-made-changes-to-test-content-when-does-it-take-effect-for-the-candidates.mdx",
+      "last_edited_time": "2026-06-01T16:38:00.000Z",
+      "title": "I made changes to Test content. When does it take effect for the Candidates?"
+    },
+    "372a50e0dca3805cb5f1c8b55beb7b43": {
+      "git_path": "docs/screen/managing-tests/editing-an-email-template.mdx",
+      "last_edited_time": "2026-06-01T16:18:00.000Z",
+      "title": "Editing an Email Template"
+    },
+    "372a50e0dca3805d8cdfcd12acb39f03": {
+      "git_path": "docs/screen/managing-tests/lock-a-test.mdx",
+      "last_edited_time": "2026-06-22T07:43:00.000Z",
+      "title": "Lock a Test"
+    },
+    "372a50e0dca38061ac3be896e085938e": {
+      "git_path": "docs/screen/test-reports/download-test-reports.mdx",
+      "last_edited_time": "2026-06-03T11:21:00.000Z",
+      "title": "Download Test Reports"
+    },
+    "372a50e0dca380659af0eb1b3ac94409": {
+      "git_path": "docs/screen/managing-tests/manage-email-templates.mdx",
+      "last_edited_time": "2026-06-03T08:57:00.000Z",
+      "title": "Manage Email Templates"
+    },
+    "372a50e0dca38066828ffdfe5524428e": {
+      "git_path": "docs/screen/test-integrity/evaluate-integrity-signals-for-flagged-candidates-at-scale-in-proctor-mode.mdx",
+      "last_edited_time": "2026-06-03T11:10:00.000Z",
+      "title": "Evaluate Integrity Signals for Flagged Candidates at Scale in Proctor Mode"
+    },
+    "372a50e0dca38066aa75c674b035c843": {
+      "git_path": "docs/screen/managing-tests/delete-a-test.mdx",
+      "last_edited_time": "2026-06-03T08:42:00.000Z",
+      "title": "Delete a Test"
+    },
+    "372a50e0dca380678659e75190b7bc14": {
+      "git_path": "docs/screen/managing-tests/replace-leaked-question.mdx",
+      "last_edited_time": "2026-06-03T08:42:00.000Z",
+      "title": "Replace Leaked Question"
+    },
+    "372a50e0dca3807181a8ca05853f96bf": {
+      "git_path": "docs/screen/test-reports/test-insights.mdx",
+      "last_edited_time": "2026-06-01T16:00:00.000Z",
+      "title": "Test Insights"
+    },
+    "372a50e0dca38073ac05f822a2017f0f": {
+      "git_path": "docs/screen/managing-tests/clone-a-test.mdx",
+      "last_edited_time": "2026-06-03T08:41:00.000Z",
+      "title": "Clone a Test"
+    },
+    "372a50e0dca380748354ffc07e7dc823": {
+      "git_path": "docs/screen/test-settings.mdx",
+      "last_edited_time": "2026-06-09T05:57:00.000Z",
+      "title": "Test Settings"
+    },
+    "372a50e0dca38074b76fe53033931dc4": {
+      "git_path": "docs/screen/frequently-asked-questions/how-do-i-upload-all-test-cases-at-once.mdx",
+      "last_edited_time": "2026-06-01T16:32:00.000Z",
+      "title": "How Do I Upload All Test Cases at Once?"
+    },
+    "372a50e0dca380788662f648fbaa3b48": {
+      "git_path": "docs/screen/test-integrity/hackerrank-desktop-app-mode.mdx",
+      "last_edited_time": "2026-06-19T10:22:00.000Z",
+      "title": "HackerRank Desktop App Mode"
+    },
+    "372a50e0dca38078b42eec304e17aedb": {
+      "git_path": "docs/screen/managing-tests/delete-a-test-submission.mdx",
+      "last_edited_time": "2026-06-03T08:46:00.000Z",
+      "title": "Delete a Test Submission"
+    },
+    "372a50e0dca3807dba79ff245803370d": {
+      "git_path": "docs/screen/test-reports/filtering-and-sorting-candidate-test-reports.mdx",
+      "last_edited_time": "2026-06-03T11:20:00.000Z",
+      "title": "Filtering and Sorting Candidate Test Reports"
+    },
+    "372a50e0dca38081adfdcf4019844f1d": {
+      "git_path": "docs/screen/frequently-asked-questions/how-to-assess-machine-learning-engineering-skills-on-hackerrank.mdx",
+      "last_edited_time": "2026-06-01T16:35:00.000Z",
+      "title": "How to Assess Machine Learning Engineering Skills on HackerRank?"
+    },
+    "372a50e0dca38082abd8ce930188aa1a": {
+      "git_path": "docs/screen/test-settings/modify-question-settings-for-tests.mdx",
+      "last_edited_time": "2026-06-01T16:12:00.000Z",
+      "title": "Modify Question Settings for Tests"
+    },
+    "372a50e0dca380838c33ca8b5934e8f6": {
+      "git_path": "docs/screen/test-reports/view-candidates-list-for-a-test.mdx",
+      "last_edited_time": "2026-06-01T16:00:00.000Z",
+      "title": "View Candidates List for a Test"
+    },
+    "372a50e0dca3808692a6fc034913f7ec": {
+      "git_path": "docs/screen/managing-tests/create-a-test.mdx",
+      "last_edited_time": "2026-06-10T18:15:00.000Z",
+      "title": "Create a Test"
+    },
+    "372a50e0dca380879f87f928d5c6e2bf": {
+      "git_path": "docs/screen/test-integrity/best-practices-for-running-group-assessments-in-proctor-mode.mdx",
+      "last_edited_time": "2026-06-03T11:11:00.000Z",
+      "title": "Best Practices for Running Group Assessments in Proctor Mode"
+    },
+    "372a50e0dca38088b870fbee0f291a77": {
+      "git_path": "docs/screen/test-integrity/secure-mode.mdx",
+      "last_edited_time": "2026-06-03T10:57:00.000Z",
+      "title": "Secure Mode"
+    },
+    "372a50e0dca3808980f3ccf4efab63d7": {
+      "git_path": "docs/screen/test-settings/watermarking-the-tests.mdx",
+      "last_edited_time": "2026-06-01T16:16:00.000Z",
+      "title": "Watermarking the Tests"
+    },
+    "372a50e0dca38089b026f2c04557bb15": {
+      "git_path": "docs/screen/test-integrity/review-integrity-issues-in-proctor-mode.mdx",
+      "last_edited_time": "2026-06-03T11:09:00.000Z",
+      "title": "Review Integrity Issues in Proctor Mode"
+    },
+    "372a50e0dca3808c8561cbb345342cb6": {
+      "git_path": "docs/screen/test-reports/advanced-evaluation.mdx",
+      "last_edited_time": "2026-06-01T16:08:00.000Z",
+      "title": "Advanced Evaluation"
+    },
+    "372a50e0dca3808ca659fe657a34aaae": {
+      "git_path": "docs/screen/test-reports/optimality.mdx",
+      "last_edited_time": "2026-06-01T16:10:00.000Z",
+      "title": "Optimality"
+    },
+    "372a50e0dca3808eb0ecd15d7cad22fd": {
+      "git_path": "docs/screen/test-integrity/best-practices-for-running-group-assessments-in-hackerrank-desktop-app-mode.mdx",
+      "last_edited_time": "2026-06-03T11:12:00.000Z",
+      "title": "Best Practices for Running Group Assessments in HackerRank Desktop App Mode"
+    },
+    "372a50e0dca38090a788c1b2ac050dca": {
+      "git_path": "docs/screen/test-settings/modify-sections-settings-for-tests.mdx",
+      "last_edited_time": "2026-06-01T16:12:00.000Z",
+      "title": "Modify Sections Settings for Tests"
+    },
+    "372a50e0dca38091912ec15e37cf4605": {
+      "git_path": "docs/screen/test-reports/front-end-back-end-and-full-stack-test-reports.mdx",
+      "last_edited_time": "2026-06-03T11:25:00.000Z",
+      "title": "Front-End, Back-End and Full-Stack Test Reports"
+    },
+    "372a50e0dca38091ad61dd42fecd661f": {
+      "git_path": "docs/screen/test-reports/candidate-benchmark.mdx",
+      "last_edited_time": "2026-06-01T16:11:00.000Z",
+      "title": "Candidate Benchmark"
+    },
+    "372a50e0dca380928ca5fe483b528aef": {
+      "git_path": "docs/screen/test-integrity/impersonation-detection.mdx",
+      "last_edited_time": "2026-06-03T11:06:00.000Z",
+      "title": "Impersonation Detection"
+    },
+    "372a50e0dca380938f97ee3e4df831fa": {
+      "git_path": "docs/screen/test-settings/configure-test-invites-settings-for-tests.mdx",
+      "last_edited_time": "2026-06-01T16:15:00.000Z",
+      "title": "Configure Test Invites Settings for Tests"
+    },
+    "372a50e0dca3809881fde4de7cacd551": {
+      "git_path": "docs/screen/test-integrity/ai-plagiarism-detection.mdx",
+      "last_edited_time": "2026-06-03T11:05:00.000Z",
+      "title": "AI Plagiarism Detection"
+    },
+    "372a50e0dca38098aa71d28eccb9ea43": {
+      "git_path": "docs/screen/managing-tests/deleting-an-email-template.mdx",
+      "last_edited_time": "2026-06-03T08:57:00.000Z",
+      "title": "Deleting an Email Template"
+    },
+    "372a50e0dca3809ead22e5eaa9b8140a": {
+      "git_path": "docs/screen/test-reports/viewing-a-candidates-detailed-test-report.mdx",
+      "last_edited_time": "2026-06-03T11:19:00.000Z",
+      "title": "Viewing a Candidate's Detailed Test Report"
+    },
+    "372a50e0dca3809fb67bfaa6e18f7cd7": {
+      "git_path": "docs/screen/frequently-asked-questions.mdx",
+      "last_edited_time": "2026-06-16T07:41:00.000Z",
+      "title": "Frequently Asked Questions"
+    },
+    "372a50e0dca380a19c7ede0332de2d16": {
+      "git_path": "docs/screen/managing-tests/limitations-with-hackerrank-projects.mdx",
+      "last_edited_time": "2026-06-03T09:00:00.000Z",
+      "title": "Limitations With HackerRank Projects"
+    },
+    "372a50e0dca380a1bd38ec556c65d081": {
+      "git_path": "docs/screen/getting-started/hackerrank-certified-assessments.mdx",
+      "last_edited_time": "2026-06-03T08:36:00.000Z",
+      "title": "HackerRank Certified Assessments"
+    },
+    "372a50e0dca380a9afe0c512d9d1d9d0": {
+      "git_path": "docs/screen/frequently-asked-questions/how-can-i-try-a-question-or-a-test.mdx",
+      "last_edited_time": "2026-06-01T16:31:00.000Z",
+      "title": "How can I Try a Question or a Test?"
+    },
+    "372a50e0dca380ab8a05d658191f2f78": {
+      "git_path": "docs/screen/getting-started/ai-assisted-tests.mdx",
+      "last_edited_time": "2026-06-10T18:36:00.000Z",
+      "title": "AI-Assisted Tests"
+    },
+    "372a50e0dca380ab9c36de5253c80375": {
+      "git_path": "docs/screen/frequently-asked-questions/how-to-rename-a-test.mdx",
+      "last_edited_time": "2026-06-01T16:31:00.000Z",
+      "title": "How to Rename a Test"
+    },
+    "372a50e0dca380ac8387c7f3a8e9e147": {
+      "git_path": "docs/screen/managing-tests/using-shared-email-templates.mdx",
+      "last_edited_time": "2026-06-01T16:19:00.000Z",
+      "title": "Using Shared Email Templates"
+    },
+    "372a50e0dca380acb44fd8ee36265d57": {
+      "git_path": "docs/screen/test-integrity/hackerrank-test-integrity.mdx",
+      "last_edited_time": "2026-06-22T08:31:00.000Z",
+      "title": "HackerRank Test Integrity"
+    },
+    "372a50e0dca380aea62ae963729c43c7": {
+      "git_path": "docs/screen/best-practice-guides/best-practices-to-maintain-test-integrity.mdx",
+      "last_edited_time": "2026-06-01T16:28:00.000Z",
+      "title": "Best Practices to Maintain Test Integrity"
+    },
+    "372a50e0dca380b0938fe23eb5d01c14": {
+      "git_path": "docs/screen/test-reports/view-candidate-test-summary-report.mdx",
+      "last_edited_time": "2026-06-03T11:17:00.000Z",
+      "title": "View Candidate Test Summary Report"
+    },
+    "372a50e0dca380b4aa86d9afb0a3a20f": {
+      "git_path": "docs/screen/frequently-asked-questions/what-happens-to-candidate-statuses-if-the-cutoff-score-is-altered.mdx",
+      "last_edited_time": "2026-06-01T16:38:00.000Z",
+      "title": "What happens to Candidate statuses if the cutoff score is altered?"
+    },
+    "372a50e0dca380ba999edd388cf560e4": {
+      "git_path": "docs/screen/managing-tests/create-test-variants.mdx",
+      "last_edited_time": "2026-07-14T09:56:00.000Z",
+      "title": "Create Test Variants"
+    },
+    "372a50e0dca380bc88a0f5d76303153a": {
+      "git_path": "docs/screen/getting-started/hackerrank-glossary.mdx",
+      "last_edited_time": "2026-06-03T08:34:00.000Z",
+      "title": "HackerRank Glossary"
+    },
+    "372a50e0dca380bcb2a1f326cc139c01": {
+      "git_path": "docs/screen/test-reports.mdx",
+      "last_edited_time": "2026-06-09T05:57:00.000Z",
+      "title": "Test Reports"
+    },
+    "372a50e0dca380c3a69ad45389701b2f": {
+      "git_path": "docs/screen/frequently-asked-questions/how-to-assess-data-engineering-skills-on-hackerrank.mdx",
+      "last_edited_time": "2026-06-01T16:34:00.000Z",
+      "title": "How to Assess Data Engineering Skills on HackerRank?"
+    },
+    "372a50e0dca380c58564f49ccfa689db": {
+      "git_path": "docs/screen/managing-tests/cancel-a-test-invite.mdx",
+      "last_edited_time": "2026-06-03T09:00:00.000Z",
+      "title": "Cancel a Test Invite"
+    },
+    "372a50e0dca380c8b201cf347c8a58f0": {
+      "git_path": "docs/screen/test-reports/ai-fluency-evaluation.mdx",
+      "last_edited_time": "2026-06-01T16:11:00.000Z",
+      "title": "AI Fluency Evaluation"
+    },
+    "372a50e0dca380caa70bc1dad960abad": {
+      "git_path": "docs/screen/managing-tests/manage-email-alerts-for-leaked-questions.mdx",
+      "last_edited_time": "2026-06-03T08:53:00.000Z",
+      "title": "Manage Email Alerts for Leaked Questions"
+    },
+    "372a50e0dca380caae3aca040ba138d2": {
+      "git_path": "docs/screen/managing-tests/export-tests-data.mdx",
+      "last_edited_time": "2026-06-03T08:46:00.000Z",
+      "title": "Export Tests Data"
+    },
+    "372a50e0dca380cbbebad0b748c57b2f": {
+      "git_path": "docs/screen/managing-tests/reinvite-candidates-to-a-test.mdx",
+      "last_edited_time": "2026-06-01T16:21:00.000Z",
+      "title": "Reinvite Candidates to a Test"
+    },
+    "372a50e0dca380ce9fafd4d28b8b79f1": {
+      "git_path": "docs/screen/frequently-asked-questions/how-to-allow-candidates-to-retake-a-test.mdx",
+      "last_edited_time": "2026-06-03T11:59:00.000Z",
+      "title": "How to Allow Candidates to Retake a Test?"
+    },
+    "372a50e0dca380d49df8c26188a3e0af": {
+      "git_path": "docs/screen/best-practice-guides.mdx",
+      "last_edited_time": "2026-06-09T05:57:00.000Z",
+      "title": "Best Practice Guides"
+    },
+    "372a50e0dca380d88ba5da369e12ab64": {
+      "git_path": "docs/screen/test-settings/hide-question-title.mdx",
+      "last_edited_time": "2026-06-01T16:15:00.000Z",
+      "title": "Hide Question Title"
+    },
+    "372a50e0dca380e08bb6e431ab0fb43f": {
+      "git_path": "docs/screen/test-settings/configure-onboarding-settings-for-tests.mdx",
+      "last_edited_time": "2026-06-01T16:13:00.000Z",
+      "title": "Configure Onboarding Settings for Tests"
+    },
+    "372a50e0dca380e48ba1d903ce2ada55": {
+      "git_path": "docs/screen/managing-tests/revoke-test-access.mdx",
+      "last_edited_time": "2026-06-01T15:40:00.000Z",
+      "title": "Revoke Test Access"
+    },
+    "372a50e0dca380eb8d6afa91fe119c76": {
+      "git_path": "docs/screen/best-practice-guides/plagiarism-best-practices-guide.mdx",
+      "last_edited_time": "2026-06-01T16:28:00.000Z",
+      "title": "Plagiarism Best Practices Guide"
+    },
+    "372a50e0dca380ef9647fe433e0e41e1": {
+      "git_path": "docs/screen/test-reports/errors-in-test-reports-for-coding-questions.mdx",
+      "last_edited_time": "2026-06-01T16:08:00.000Z",
+      "title": "Errors in Test Reports for Coding Questions"
+    },
+    "372a50e0dca380efbcdddac34e874262": {
+      "git_path": "docs/screen/managing-tests/extend-test-duration-for-candidates.mdx",
+      "last_edited_time": "2026-06-03T08:55:00.000Z",
+      "title": "Extend Test Duration for Candidates"
+    },
+    "372a50e0dca380f6829ccdf653bcf846": {
+      "git_path": "docs/screen/frequently-asked-questions/screen-faqs.mdx",
+      "last_edited_time": "2026-06-03T08:32:00.000Z",
+      "title": "Screen FAQ's"
+    },
+    "372a50e0dca380f78cececc54a91a0f0": {
+      "git_path": "docs/screen/getting-started/scoring-certified-assessments.mdx",
+      "last_edited_time": "2026-06-03T08:36:00.000Z",
+      "title": "Scoring Certified Assessments"
+    },
+    "372a50e0dca380f9809dfd891819773b": {
+      "git_path": "docs/screen/managing-tests/archive-a-test.mdx",
+      "last_edited_time": "2026-06-03T08:42:00.000Z",
+      "title": "Archive a Test"
+    },
+    "372a50e0dca380fe9185d314880e10f8": {
+      "git_path": "docs/screen/test-reports/code-quality-evaluation.mdx",
+      "last_edited_time": "2026-06-01T16:10:00.000Z",
+      "title": "Code Quality Evaluation"
+    },
+    "372a50e0dca380ff9a5ecff77b0eb80c": {
+      "git_path": "docs/screen/managing-tests/test-labels.mdx",
+      "last_edited_time": "2026-06-01T15:48:00.000Z",
+      "title": "Test Labels"
+    },
+    "372a50e0dca38131bc5af9a3d9d5de6b": {
+      "git_path": "docs/interviews/interview-integrity.mdx",
+      "last_edited_time": "2026-06-09T05:59:00.000Z",
+      "title": "Interview Integrity"
+    },
+    "372a50e0dca381389f5bdf3331ec4978": {
+      "git_path": "docs/interviews/integrations.mdx",
+      "last_edited_time": "2026-06-09T05:59:00.000Z",
+      "title": "Integrations"
+    },
+    "372a50e0dca38159bb61ccf505457a10": {
+      "git_path": "docs/interviews/manage-interviews.mdx",
+      "last_edited_time": "2026-06-09T05:59:00.000Z",
+      "title": "Manage Interviews"
+    },
+    "372a50e0dca381689c41e008f897e22e": {
+      "git_path": "docs/interviews/scoring-and-reports.mdx",
+      "last_edited_time": "2026-06-09T05:59:00.000Z",
+      "title": "Scoring and Reports"
+    },
+    "372a50e0dca3816da26fc8874b9d3857": {
+      "git_path": "docs/interviews/interview-settings.mdx",
+      "last_edited_time": "2026-06-09T05:59:00.000Z",
+      "title": "Interview Settings"
+    },
+    "372a50e0dca3819cb181da31c6c4e11f": {
+      "git_path": "docs/screen/index.mdx",
+      "last_edited_time": "2026-06-22T09:16:00.000Z",
+      "title": "Screen"
+    },
+    "372a50e0dca381ad8ecac3f9529e9ba7": {
+      "git_path": "docs/interviews/getting-started.mdx",
+      "last_edited_time": "2026-06-18T18:39:00.000Z",
+      "title": "Getting Started"
+    },
+    "372a50e0dca381bbacf8e0160de43592": {
+      "git_path": "docs/interviews/index.mdx",
+      "last_edited_time": "2026-06-09T06:05:00.000Z",
+      "title": "Interviews"
+    },
+    "372a50e0dca381c093a0c413ed7d62ac": {
+      "git_path": "docs/interviews/additional-resources.mdx",
+      "last_edited_time": "2026-06-09T05:59:00.000Z",
+      "title": "Additional Resources"
+    },
+    "373a50e0dca38007a7a5d95fb4496169": {
+      "git_path": "docs/interviews/manage-interviews/repl-read-eval-print-loop.mdx",
+      "last_edited_time": "2026-06-02T06:43:00.000Z",
+      "title": "REPL [ Read\u200a\u2014\u200aEval\u200a\u2014\u200aPrint\u200a\u2014\u200aLoop]"
+    },
+    "373a50e0dca380098872c2497d237be6": {
+      "git_path": "docs/interviews/manage-interviews/devops-questions-in-hackerrank-interviews.mdx",
+      "last_edited_time": "2026-06-02T06:36:00.000Z",
+      "title": "DevOps Questions in HackerRank Interviews"
+    },
+    "373a50e0dca3800a970bd662f5ebe975": {
+      "git_path": "docs/interviews/getting-started/introduction-to-hackerrank-interviews.mdx",
+      "last_edited_time": "2026-06-03T11:59:00.000Z",
+      "title": "Introduction to HackerRank Interviews"
+    },
+    "373a50e0dca38010aae2e29f619fa2b5": {
+      "git_path": "docs/interviews/manage-interviews/audio-or-video-device-selection-during-interview.mdx",
+      "last_edited_time": "2026-06-02T06:42:00.000Z",
+      "title": "Audio or Video Device Selection During Interview"
+    },
+    "373a50e0dca3801289fbc83014d02dc6": {
+      "git_path": "docs/interviews/interview-integrity/screen-to-interview-identity-match.mdx",
+      "last_edited_time": "2026-06-02T14:17:00.000Z",
+      "title": "Screen-to-Interview Identity Match"
+    },
+    "373a50e0dca38017a578f7da159a976c": {
+      "git_path": "docs/interviews/manage-interviews/data-science-projects-in-hackerrank-interviews.mdx",
+      "last_edited_time": "2026-06-02T13:56:00.000Z",
+      "title": "Data Science Projects in HackerRank Interviews"
+    },
+    "373a50e0dca38018b2a0f3000867e3b0": {
+      "git_path": "docs/interviews/getting-started/audio-and-video-calls-in-interviews-powered-by-zoom.mdx",
+      "last_edited_time": "2026-06-02T13:04:00.000Z",
+      "title": "Audio and Video Calls in Interviews Powered by Zoom"
+    },
+    "373a50e0dca38029aad9f58076838cc9": {
+      "git_path": "docs/interviews/manage-interviews/io-console-inside-the-interviews.mdx",
+      "last_edited_time": "2026-06-02T06:44:00.000Z",
+      "title": "I/o Console Inside the Interviews"
+    },
+    "373a50e0dca3802da599ec5bf1f7b0aa": {
+      "git_path": "docs/interviews/manage-interviews/code-review-questions-in-interviews.mdx",
+      "last_edited_time": "2026-06-02T13:57:00.000Z",
+      "title": "Code Review Questions in Interviews"
+    },
+    "373a50e0dca38033a2a9dac6f78c9b4b": {
+      "git_path": "docs/interviews/scoring-and-reports/scorecard-assist.mdx",
+      "last_edited_time": "2026-06-02T14:30:00.000Z",
+      "title": "Scorecard Assist"
+    },
+    "373a50e0dca3803495c1d0e7162ae4a7": {
+      "git_path": "docs/interviews/additional-resources/faqs.mdx",
+      "last_edited_time": "2026-06-09T06:13:00.000Z",
+      "title": "FAQs"
+    },
+    "373a50e0dca380369d5efe006c65e4d1": {
+      "git_path": "docs/interviews/manage-interviews/end-an-interview.mdx",
+      "last_edited_time": "2026-06-02T06:17:00.000Z",
+      "title": "End an Interview"
+    },
+    "373a50e0dca380389254ce9ac4b70c90": {
+      "git_path": "docs/interviews/manage-interviews/reschedule-an-interview.mdx",
+      "last_edited_time": "2026-06-02T06:18:00.000Z",
+      "title": "Reschedule an Interview"
+    },
+    "373a50e0dca3803bb47ddcacd1866d9b": {
+      "git_path": "docs/interviews/manage-interviews/front-end-questions-in-hackerrank-interviews.mdx",
+      "last_edited_time": "2026-06-02T12:09:00.000Z",
+      "title": "Front-End Questions in HackerRank Interviews"
+    },
+    "373a50e0dca3803bb97ccb19c31e247b": {
+      "git_path": "docs/interviews/integrations/webex-hackerrank-interview-integration.mdx",
+      "last_edited_time": "2026-06-02T06:54:00.000Z",
+      "title": "Webex - HackerRank Interview Integration"
+    },
+    "373a50e0dca3803e837cc5b16d44d55d": {
+      "git_path": "docs/interviews/integrations/zoom-hackerrank-interview-integration.mdx",
+      "last_edited_time": "2026-06-02T06:55:00.000Z",
+      "title": "Zoom - HackerRank Interview Integration"
+    },
+    "373a50e0dca38047a514d6d188fa0fd5": {
+      "git_path": "docs/interviews/additional-resources/recommended-questions-and-interviewers-guidelines.mdx",
+      "last_edited_time": "2026-06-02T14:33:00.000Z",
+      "title": "Recommended Questions and Interviewer\u2019s Guidelines"
+    },
+    "373a50e0dca38047b88de1ffd43c452d": {
+      "git_path": "docs/interviews/manage-interviews/add-questions-to-interview.mdx",
+      "last_edited_time": "2026-06-02T13:16:00.000Z",
+      "title": "Add Questions to Interview"
+    },
+    "373a50e0dca380498a74c0344aa8ca8f": {
+      "git_path": "docs/interviews/scoring-and-reports/interview-scorecards.mdx",
+      "last_edited_time": "2026-06-02T14:27:00.000Z",
+      "title": "Interview Scorecards"
+    },
+    "373a50e0dca38051b7baef5aa078bd79": {
+      "git_path": "docs/interviews/manage-interviews/importing-projects-in-hackerrank-interview.mdx",
+      "last_edited_time": "2026-06-02T13:17:00.000Z",
+      "title": "Importing Projects in HackerRank Interview"
+    },
+    "373a50e0dca3805f9b42da3413bd8c7e": {
+      "git_path": "docs/interviews/interview-settings/configure-interview-settings.mdx",
+      "last_edited_time": "2026-06-02T14:22:00.000Z",
+      "title": "Configure Interview Settings"
+    },
+    "373a50e0dca38075a64df76491ea71dd": {
+      "git_path": "docs/interviews/manage-interviews/manage-interviews-templates.mdx",
+      "last_edited_time": "2026-06-02T14:03:00.000Z",
+      "title": "Manage Interviews Templates"
+    },
+    "373a50e0dca3807eb81aeede707ce4ad": {
+      "git_path": "docs/interviews/manage-interviews/interviewing-with-whiteboards.mdx",
+      "last_edited_time": "2026-06-02T14:09:00.000Z",
+      "title": "Interviewing with Whiteboards"
+    },
+    "373a50e0dca38084a78fc852542378a2": {
+      "git_path": "docs/interviews/interview-settings/hide-locked-tabs-in-interviews.mdx",
+      "last_edited_time": "2026-06-02T14:20:00.000Z",
+      "title": "Hide Locked Tabs in Interviews"
+    },
+    "373a50e0dca38084ac1ad459836d4618": {
+      "git_path": "docs/interviews/manage-interviews/observation-mode-in-interviews.mdx",
+      "last_edited_time": "2026-06-02T14:08:00.000Z",
+      "title": "Observation Mode in Interviews"
+    },
+    "373a50e0dca3808abc2bf80ee1d5b446": {
+      "git_path": "docs/interviews/manage-interviews/create-an-interview.mdx",
+      "last_edited_time": "2026-06-02T13:12:00.000Z",
+      "title": "Create an Interview"
+    },
+    "373a50e0dca3808d9fd3c69ebeb5d031": {
+      "git_path": "docs/interviews/manage-interviews/deleting-interview-questions.mdx",
+      "last_edited_time": "2026-06-02T06:38:00.000Z",
+      "title": "Deleting Interview Questions"
+    },
+    "373a50e0dca3808fa157e541ac907d6f": {
+      "git_path": "docs/interviews/additional-resources/faqs/frequently-asked-questions.mdx",
+      "last_edited_time": "2026-06-03T12:09:00.000Z",
+      "title": "Frequently Asked Questions"
+    },
+    "373a50e0dca380988ef9c3f9a582a9a1": {
+      "git_path": "docs/interviews/manage-interviews/mobile-development-questions-in-interviews.mdx",
+      "last_edited_time": "2026-06-02T06:21:00.000Z",
+      "title": "Mobile Development Questions in Interviews"
+    },
+    "373a50e0dca38099ae16d795b1e9b4ae": {
+      "git_path": "docs/interviews/getting-started/self-signup-for-interviewers.mdx",
+      "last_edited_time": "2026-06-02T06:03:00.000Z",
+      "title": "Self-Signup for Interviewers"
+    },
+    "373a50e0dca380a1945ae38cda7d71ba": {
+      "git_path": "docs/interviews/getting-started/the-next-generation-of-hiring-interview-features.mdx",
+      "last_edited_time": "2026-06-02T06:02:00.000Z",
+      "title": "The Next-Generation of Hiring: Interview Features"
+    },
+    "373a50e0dca380a484abf35b6dcc56d2": {
+      "git_path": "docs/interviews/manage-interviews/export-interview-list.mdx",
+      "last_edited_time": "2026-06-02T14:12:00.000Z",
+      "title": "Export Interview List"
+    },
+    "373a50e0dca380a4ae71fee299b3a64d": {
+      "git_path": "docs/interviews/scoring-and-reports/interview-report.mdx",
+      "last_edited_time": "2026-06-02T14:28:00.000Z",
+      "title": "Interview Report"
+    },
+    "373a50e0dca380a6aa43cb287581fb18": {
+      "git_path": "docs/interviews/manage-interviews/delete-an-interview.mdx",
+      "last_edited_time": "2026-06-02T06:19:00.000Z",
+      "title": "Delete an Interview"
+    },
+    "373a50e0dca380b0a621fbef8eb09de5": {
+      "git_path": "docs/interviews/manage-interviews/use-templates-in-interviews.mdx",
+      "last_edited_time": "2026-06-02T14:04:00.000Z",
+      "title": "Use Templates in Interviews"
+    },
+    "373a50e0dca380b39717c44e70d84d79": {
+      "git_path": "docs/interviews/additional-resources/hackerrank-interview-best-practices.mdx",
+      "last_edited_time": "2026-06-02T14:32:00.000Z",
+      "title": "HackerRank Interview Best Practices"
+    },
+    "373a50e0dca380b9b3add2898689782c": {
+      "git_path": "docs/interviews/getting-started/network-monitoring-in-hackerrank-interviews.mdx",
+      "last_edited_time": "2026-06-02T12:58:00.000Z",
+      "title": "Network Monitoring in HackerRank Interviews"
+    },
+    "373a50e0dca380bd8411d2857289a515": {
+      "git_path": "docs/interviews/interview-integrity/interview-integrity-signals.mdx",
+      "last_edited_time": "2026-06-16T08:30:00.000Z",
+      "title": "Interview Integrity Signals"
+    },
+    "373a50e0dca380c584d6d83ea701aee9": {
+      "git_path": "docs/interviews/manage-interviews/import-questions-from-screen-test.mdx",
+      "last_edited_time": "2026-06-02T14:07:00.000Z",
+      "title": "Import Questions from Screen Test"
+    },
+    "373a50e0dca380c59e57ebc2eeef688b": {
+      "git_path": "docs/interviews/getting-started/question-types-in-hackerrank-interviews.mdx",
+      "last_edited_time": "2026-06-02T13:00:00.000Z",
+      "title": "Question Types in HackerRank Interviews"
+    },
+    "373a50e0dca380cc889afc804e5d142a": {
+      "git_path": "docs/interviews/additional-resources/attach-a-file-to-a-problem-statement.mdx",
+      "last_edited_time": "2026-06-02T14:34:00.000Z",
+      "title": "Attach a File to a Problem Statement"
+    },
+    "373a50e0dca380cc8a82e2fd3ccb86d0": {
+      "git_path": "docs/interviews/manage-interviews/replacing-interview-questions.mdx",
+      "last_edited_time": "2026-06-02T13:58:00.000Z",
+      "title": "Replacing Interview Questions"
+    },
+    "373a50e0dca380d08e91d08bacd21982": {
+      "git_path": "docs/interviews/interview-settings/using-virtual-lobby-in-hackerrank-interviews.mdx",
+      "last_edited_time": "2026-06-02T14:18:00.000Z",
+      "title": "Using Virtual Lobby in HackerRank Interviews"
+    },
+    "373a50e0dca380d2be74e4807eb926e6": {
+      "git_path": "docs/interviews/getting-started/ai-assisted-interviews.mdx",
+      "last_edited_time": "2026-06-16T08:04:00.000Z",
+      "title": "AI-Assisted Interviews"
+    },
+    "375a50e0dca380d7aebfd299b5d0f12d": {
+      "git_path": "docs/screen/getting-started/introduction-to-screen.mdx",
+      "last_edited_time": "2026-06-18T09:07:00.000Z",
+      "title": "Introduction to Screen"
+    },
+    "381a50e0dca38083b8aec3f24b99d916": {
+      "git_path": "docs/screen/frequently-asked-questions/legacy-candidate-site-deprecation-faqs.mdx",
+      "last_edited_time": "2026-06-16T07:45:00.000Z",
+      "title": "Legacy Candidate Site Deprecation FAQs"
+    }
+  }
+}

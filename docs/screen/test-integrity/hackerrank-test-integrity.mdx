@@ -1,0 +1,93 @@
+---
+title: "HackerRank Test Integrity"
+description: "HackerRank offers multiple integrity modes and add-on features to help you maintain the right balance between rule enforcement, candidate experience, and compl…"
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+HackerRank offers multiple integrity modes and add-on features to help you maintain the right balance between rule enforcement, candidate experience, and compliance.
+
+## Test Integrity Modes
+
+You can select from the following integrity modes based on your assessment requirements.
+
+<Frame>
+  <img src="/images/hackerrank-test-integrity/47be88056989644c.png" alt="image" />
+</Frame>
+
+### Secure Mode
+
+Secure Mode runs tests in a controlled browser environment. It enforces full-screen mode, blocks copy and paste actions, prevents the use of multiple monitors, and alerts when candidates switch tabs.
+
+For more information, see Secure mode
+
+### Proctor Mode (AI Add-on)
+
+Proctor Mode includes all Secure Mode capabilities and adds AI-powered features such as screenshot analysis, plagiarism detection, and webcam anomaly detection.
+
+For more information, see Proctor Mode
+
+### HackerRank Desktop App Mode (AI Add-on)
+
+HackerRank Desktop App Mode includes all Proctor Mode capabilities and adds operating system–level monitoring to create a fully locked-down environment. Candidates must install the lightweight, native HackerRank Desktop App.
+
+For more information, see [📄 HackerRank Desktop App Mode](https://app.notion.com/docs/3147b674-5cbb-4bde-9528-7699bb64b1a7/articles/2951c46b-e324-42ec-9a35-cdcd9cae6b7c).
+
+## Additional integrity features
+
+You can enable additional integrity features to strengthen test monitoring and candidate verification.
+
+<Frame>
+  <img src="/images/hackerrank-test-integrity/e385da3976b4d5b6.png" alt="image" />
+</Frame>
+
+### AI Plagiarism Detection
+
+AI Plagiarism Detection feature flags potential plagiarism by analyzing candidate behavior, code evolution, and submission similarities.
+
+For more information, see [📄 AI Plagiarism Detection](https://app.notion.com/docs/3147b674-5cbb-4bde-9528-7699bb64b1a7/articles/70376365-f469-4cf0-a771-b793966b8704).
+
+### Image Proctoring
+
+Image Proctoring feature requires candidates to enable their webcam before starting the test. The system captures periodic snapshots during the test, which appear in the candidate’s report for review.
+
+For more information, see [Image Proctoring](https://support.hackerrank.com/articles/7825915809-impersonation-detection#image-proctoring-13).
+
+### Image Analysis
+
+Image Analysis feature uses AI to analyze webcam images and detect suspicious activity during the test.
+
+For more information, see [Image Analysis](https://support.hackerrank.com/articles/7825915809-impersonation-detection#image-analysis-36).
+
+### Photo Identification
+
+This feature requires candidates to capture their image before starting the test.
+
+For more information, see [Photo Identification](https://support.hackerrank.com/articles/7825915809-impersonation-detection#photo-identification-3).
+
+## Built-in integrity features
+
+HackerRank provides basic integrity features by default. These features require no additional setup.
+
+### Copy/Paste Tracking
+
+When candidates copy or paste text, the system records the action automatically. Pasted content appears in the candidate’s test report. This feature applies to Coding, Subjective, and Sentence Completion questions.
+
+Recruiters can view copied text in the **Timeline** view of the candidate’s Summary Report.
+
+The **Copy-Paste Frequency** column in the CSV report shows how many times a candidate copied or pasted text. The plagiarism detection model also analyzes copied content from external sources.
+
+### Tab Proctoring
+
+Tab Proctoring tracks how often and for how long a candidate leaves the test window. Tab-switch activity appears in both the candidate’s **Summary Report** and the **CSV report**.
+
+In the CSV report, review the following columns for more insights:
+
+- Out of Window Duration
+- Number of Window Exits

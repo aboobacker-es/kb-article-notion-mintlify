@@ -1,0 +1,101 @@
+---
+title: "Evaluate Integrity Signals for Flagged Candidates at Scale in Proctor Mode"
+description: "Proctor Mode helps test administrators quickly identify potential integrity issues in online assessments. Proctor mode reports are easy to review for individua…"
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+Proctor Mode helps test administrators quickly identify potential integrity issues in online assessments. [Proctor mode reports](https://support.hackerrank.com/articles/5663779659-proctor-mode#after-the-test-generate-post-test-integrity-report-26) are easy to review for individual sessions, but become inefficient and challenging when evaluating candidate attempts at scale.
+
+## Evaluating Integrity Signals for flagged candidates at scale
+
+To evaluate Integrity Signal for flagged candidates at scale in Proctor Mode:
+
+### Step 1: Export Proctor Mode data for flagged candidates
+
+1. Log in to your **HackerRank for Work** account using your credentials.
+1. Go to the **Tests** tab.
+1. Open the test that contains the candidate data.
+1. Go to the **Candidates** sub-tab.
+1. In the left panel, under **Integrity Issues**, select the checkboxes for **High** and **Medium**.
+
+  <Frame>
+    <img src="/images/evaluate-integrity-signals-for-flagged-candidates-at-scale-in-proctor-mode/619179484613765e.png" alt="image" />
+  </Frame>
+1. Select the **Select all rows from table** checkbox above the candidate list.
+
+  <Frame>
+    <img src="/images/evaluate-integrity-signals-for-flagged-candidates-at-scale-in-proctor-mode/b712ba30887729cd.png" alt="image" />
+  </Frame>
+1. Click **Export** and select **Excel**.
+
+### Step 2: Apply filters in the spreadsheet
+
+Use the exported file to filter and analyze candidates based on suspicious activities. Apply the following filters:
+
+1. **Fullscreen Exit Count and Fullscreen Exit Duration:** Indicates how many times a candidate exits the enforced full-screen environment and for how long. The system flags candidates who violate these rules with **High Integrity** issues. There are no known ambiguities in detecting this rule violation.
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <Frame>
+    <img src="/images/evaluate-integrity-signals-for-flagged-candidates-at-scale-in-proctor-mode/fe3f0395f4228238.png" alt="image" />
+  </Frame>
+1. **Number of Window Exits and Out of Window Duration:** Indicates how many times a candidate navigates away from the active test window and for how long.
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <Frame>
+    <img src="/images/evaluate-integrity-signals-for-flagged-candidates-at-scale-in-proctor-mode/21ee284d3f5126c9.png" alt="image" />
+  </Frame>
+1. **Proctor Activity Suspicion Severity and Proctor Activity Suspicion Score:** Indicates suspicious activity detected during webcam monitoring.
+
+  <!-- Unhandled Notion block: numbered_list_item -->
+
+  <!-- Unhandled Notion block: numbered_list_item -->
+
+  <!-- Unhandled Notion block: numbered_list_item -->
+
+  <!-- Unhandled Notion block: numbered_list_item -->
+
+  <Frame>
+    <img src="/images/evaluate-integrity-signals-for-flagged-candidates-at-scale-in-proctor-mode/0f796c5da843e793.png" alt="image" />
+  </Frame>
+
+<Note>
+**Note:** Ignore multiple-face violation flags if the test takes place in a setting where multiple faces are expected (for example, invigilated university exam halls)
+</Note>
+
+1. **Integrity Summary:** Review the **Integrity Summary** column for tools detected in the screenshots taken during the test. Common tools include:
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  An honest test session shows only the HackerRank interface. If a candidate opens another application or navigates away, the system flags it in the **Integrity Summary**.
+
+  Use discretion when reviewing flagged tools, and verify by checking screenshots in the **Session Replay** on the attempt report.
+
+  <Frame>
+    <img src="/images/evaluate-integrity-signals-for-flagged-candidates-at-scale-in-proctor-mode/eefc5ce0d8da23e5.png" alt="image" />
+  </Frame>
+1. **Attempt Activity Suspicion Severity and** **Attempt Activity Suspicion Score:** Indicates suspicious or unusual code-writing patterns detected by advanced plagiarism models.
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->
+
+  <!-- Unhandled Notion block: bulleted_list_item -->

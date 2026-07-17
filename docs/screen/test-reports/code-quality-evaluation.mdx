@@ -1,0 +1,83 @@
+---
+title: "Code Quality Evaluation"
+description: "This feature is part of the AI Add-on. For more information, see 📄 Advanced Evaluation."
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+This feature is part of the AI Add-on. For more information, see [📄 Advanced Evaluation](https://app.notion.com/docs/3147b674-5cbb-4bde-9528-7699bb64b1a7/articles/77cf8e0b-57e1-498f-9c64-9526abcb1170).
+
+Code quality evaluation assesses how well the written code adheres to best practices for readability, maintainability, efficiency, and security. This evaluation often takes place through processes such as:
+
+- **Peer reviews**: Developers review each other’s code to ensure compliance with coding standards and identify areas for improvement.
+- **Automated tools**: Static analysis tools automatically highlight code smells, formatting issues, or potential errors.
+- **Test cases and unit tests**: These validate the functional correctness of the code.
+- **Quality metrics**: Metrics include cyclomatic complexity, code coverage, duplication rates, and adherence to coding conventions.
+
+In HackerRank tests, correctness is evaluated through automated test cases and quality assurance checks for functional specifications. Code quality evaluation may also involve highlighting potential issues in specific areas. Adding comments on issues or metrics can enhance assessments by providing insights into maintainability, efficiency, and overall code quality.
+
+## Key benefits
+
+Code quality evaluation highlights how advancements in AI are reshaping the role of engineering. Specifically, it highlights:
+
+- **AI’s problem-solving capabilities:** AI efficiently solves a significant portion of logical and coding problems, prompting hiring teams to evaluate skills beyond accuracy metrics.
+- **Need for additional evaluation signals:** As AI enhances problem-solving, hiring teams require extra indicators to differentiate between candidates. This ensures hiring decisions align with the demands of enterprise-level development.
+- **Code quality as a differentiator:** For candidates with similar scores, the ability to write clean, maintainable, and high-standard code becomes a decisive factor in assessing competency.
+- **Enterprise relevance:** Writing scalable, resilient code is essential for enterprise applications. This reflects a candidate’s readiness to tackle real-world challenges and contribute effectively to organizational goals.
+
+## Evaluation method
+
+HackerRank provides a prompt listing specific rules and issues to the AI model along with the candidate’s code. The AI generates feedback on the code and organizes comments into different categories. Based on this feedback, the system uses a straightforward method to evaluate code quality.
+
+HackerRank uses the time-debt method to create a grading system for code quality. This evaluates how long it takes to fix a mistake compared to how long it took to write the code. If fixing the mistake takes much longer, the code quality is considered poor. This helps quantify the impact of low-quality code and enables consistent grading across different solutions and programming languages.
+
+**Note**: This feature is currently supported only for Coding and React questions.
+
+### Grades based on tech debt
+
+- **Grade A**: Tech debt is low; code quality is good.
+- **Grade B**: Tech debt is medium; code quality is average.
+- **Grade C**: Tech debt is high; code quality is poor and would require significant fixes.
+- **Not Generated: **System does not generate a code quality grade for candidates who score below 50%.
+- **Not Available: **Grade is not provided for questions that are not supported for code quality grading.
+
+## Enabling code quality evaluation
+
+Turn on **Advanced Evaluation** to enable code quality evaluation for all tests. For more information, see [Enable Advanced Evaluation](https://support.hackerrank.com/articles/7098008997-advanced-evaluation#enable-advanced-evaluation-6).
+
+## Reviewing candidate results
+
+You can view each candidate’s code quality grade in the **Candidate List**. You can filter candidates by their code quality grade.
+
+The **Summary Report** also displays the code quality grade in a dedicated **Code Quality** column.
+
+<Frame>
+  <img src="/images/code-quality-evaluation/dddaacc4d1befa30.gif" alt="image" />
+</Frame>
+
+You can evaluate a candidate’s code quality directly in the **Detailed Report**. The report provides a code quality grade alongside the candidate’s score, offering deeper insight into their coding abilities.
+
+### Key components
+
+- **Code quality grade**: A quick indicator of the candidate’s code quality. This requires the question to have a recommended time set.
+- **Code comments**: Inline comments in the diff view highlight specific areas for improvement.
+
+If you disagree with a comment, you can choose to ignore it. The grade is automatically updated to reflect this action.
+
+### Reading grade
+
+- **A**: Good quality code; very few issues.
+- **B**: Medium quality code; some issues.
+- **C**: Poor quality code; significant issues.
+
+<Frame>
+  <img src="/images/code-quality-evaluation/e10714a770f8ff5a.png" alt="image" />
+</Frame>
+
+**Note**: If a user ignores a violation, the code quality grade is recalculated in real time to reflect the updated assessment.

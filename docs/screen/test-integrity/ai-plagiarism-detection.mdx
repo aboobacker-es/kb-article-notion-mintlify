@@ -1,0 +1,134 @@
+---
+title: "AI Plagiarism Detection"
+description: "Plagiarism in the hiring process compromises the integrity of evaluations, making it difficult to assess a candidate’s abilities accurately. Plagiarism detecti…"
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+Plagiarism in the hiring process compromises the integrity of evaluations, making it difficult to assess a candidate’s abilities accurately. Plagiarism detection tools help maintain fairness, creating a level playing field that leads to better hiring decisions.
+
+### Types of Code Plagiarism
+
+We encounter three types of code plagiarism:
+
+- Use of AI tools when explicitly prohibited.
+- Plagiarism from other external sources like the internet.
+- Copying code from someone else who took the same test.
+
+### Types of Plagiarism Detection Models
+
+#### Standard plagiarism detection
+
+[Standard plagiarism detection](https://support.hackerrank.com/articles/2106056073-plagiarism-detection-using-moss-(measure-of-software-similarity)) is enabled by default for all tests. It uses[** **](https://theory.stanford.edu/~aiken/moss/)[Moss](https://theory.stanford.edu/~aiken/moss/) (Measure of Software Similarity) to compare a candidate’s code against others in our database. This method effectively identifies plagiarism from external sources or copied test cases (as mentioned above under types of code plagiarism). However, it may result in false positives, depending on factors such as code length and similarity threshold.
+
+#### Advanced AI plagiarism detection
+
+To address all three types of code plagiarism, including AI-aided malpractice, we have developed an advanced Machine Learning (ML) model. This model analyzes multiple factors, such as:
+
+- Code writing patterns
+- Time taken to solve the problem
+- Copy-paste activity
+- Tab-switching behavior
+
+The ML model predicts suspicious behavior and classifies candidate attempts in a test as either "**High**" or "**Medium**." This detection is especially useful for identifying the use of AI tools like ChatGPT when their usage is restricted.
+
+The flagged attempts are highlighted in candidate reports, allowing hiring teams to review the reasons and make informed decisions. Human oversight remains crucial, as the ML model currently has an overall precision of **85%**, meaning flagged sessions are correct **85%** of the time.
+
+<Note>
+**Note**: The AI Plagiarism Detection feature currently supports only Coding questions.
+</Note>
+
+#### Limitations
+
+AI plagiarism detection is limited when evaluating questions requiring minimal effort to achieve a full score or when solutions consist of very few lines of code. These scenarios often lack enough data points for accurate detection. However, the system will still flag the response for potential plagiarism if significant external content is copy-pasted.
+
+<Note>
+**Note:** Given that it’s a Machine Learning model, we comply with the audit requirements mentioned in the[** AEDT / NYC AI law**](https://support.hackerrank.com/articles/8514725302-summary-of-bias-audit-results-(hackerrank%27s-image-analysis-system))[.](https://support.hackerrank.com/articles/8514725302-summary-of-bias-audit-results-(hackerrank%27s-image-analysis-system))
+</Note>
+
+### Enabling Advanced Plagiarism Detection for a Test
+
+This feature can be enabled from Test Settings.
+
+**Steps**
+
+- Click on **Settings** within a test and select **Test Integrity** under the **Test Administration** section.
+- Scroll down to **Plagiarism** and turn on the **AI Plagiarism** toggle.
+- Click on **Agree & Enable** from the following popup.
+
+<Frame>
+  <img src="/images/ai-plagiarism-detection/03e44d49d2fc8871.bin" alt="image" />
+</Frame>
+
+### Candidate Consent
+
+When AI plagiarism detection is enabled, candidates must consent before starting the test.
+
+<Frame>
+  <img src="/images/ai-plagiarism-detection/310090c6e97085e0.bin" alt="image" />
+</Frame>
+
+### Signals Used for Detection
+
+A non-exhaustive list of factors considered:
+
+- **Copy-Pasting:** Significant portions of code copied from external sources.
+- **Coding Patterns:** Structural similarities in code and distinct coding styles.
+- **Iterations:** Multiple iterations in the code while tackling layered tasks.
+- **Tab-Switching:** Switching away from the active test tab during execution.
+
+### Viewing Flagged Plagiarism Attempts
+
+When a candidate's test attempt is flagged for plagiarism, it is categorized as "**High**" or "**Medium**" based on the confidence level of the model’s prediction. Follow the steps below to view these flagged attempts.
+
+**Steps**
+
+1. Navigate to the **Candidate List** and choose the candidate whose test attempt has been flagged.
+1. You can view the suspicious activity under the **Performance** tab in the Candidate Summary report.
+1. To review more details on the plagiarism signals, click on the question that has been flagged.
+1. In the question details, the **Keystroke Codeplayer** lets you quickly understand why a candidate was flagged for plagiarism. You can navigate to the relevant portions of their coding journey where potential suspicious activity may have occurred.
+
+<Frame>
+  <img src="/images/ai-plagiarism-detection/fe144ee4d0b62f71.gif" alt="image" />
+</Frame>
+
+#### Understanding the Reasons for Flagging
+
+There are two main categories under which a candidate’s attempt can be flagged:
+
+**Code Similarity: **The candidate’s code is similar to one or more candidates' submissions, indicating potential plagiarism.
+
+**Coding Patterns: **Unusual behavior was detected through the candidate’s keystroke patterns during the test. This may involve:
+
+- Code iterations
+- Writing patterns or
+- Tab switch instances
+
+**Sub-Patterns in Coding Behavior**: The following sub-patterns are commonly detected when **coding patterns** raise concerns about the candidate’s behavior:
+
+- **Suspicious Code Resetting: **A large section of previously written code is deleted and replaced, accompanied by irregular typing or cursor movements.
+- **External Copy-Paste: **Significant portions of code are copied directly from an external source.
+
+### Continuous Model Improvement
+
+HackerRank’s dedicated ML team continuously improves the plagiarism detection model by learning from emerging patterns of code plagiarism and misclassifications. When a statistically significant improvement is made, new updates to the model are deployed automatically.
+
+### FAQs
+
+<Accordion title="**Will coding in an external IDE instead of the HackerRank platform trigger a potential cheating flag?**">
+If candidates use Projects, which support an offline workflow (coding in their own IDE and pushing the code to the HackerRank platform), no cheating flag is triggered.
+
+However, if candidates solve a standard coding question in an external IDE and copy and paste their code into the HackerRank platform, the system is likely to flag this behavior as suspicious activity.
+</Accordion>
+
+### Related Articles
+
+- Standard Plagiarism Detection -[** **](https://support.hackerrank.com/hc/en-us/articles/115005603547-Plagiarism-Detection-Using-MOSS-Measure-of-Software-Similarity)[**Moss model**](https://support.hackerrank.com/articles/2106056073-plagiarism-detection-using-moss-(measure-of-software-similarity))
+- Future of Hiring with AI -[** **](https://support.hackerrank.com/hc/en-us/articles/31668981495187-The-Next-Generation-of-Hiring-Interview-Features)[**Next-gen Hiring Process**](https://support.hackerrank.com/articles/5377881818-the-next-generation-of-hiring%3A-interview-features)
+- [**Plagiarism Best Practices**](https://support.hackerrank.com/articles/4291690360-plagiarism-best-practices-guide)

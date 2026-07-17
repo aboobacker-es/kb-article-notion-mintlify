@@ -1,0 +1,42 @@
+---
+title: "What happens to Candidate statuses if the cutoff score is altered?"
+description: "If the cutoff score is changed after the test report is processed, the ATS state of a candidate's test attempt will not change. The change in cutoff score will…"
+mode: "custom"
+---
+
+<style dangerouslySetInnerHTML={{__html: `
+  #sidebar, nav[aria-label="Pages"] { display: none !important; }
+  main, [class*="lg:pl-72"] { padding-left: 0 !important; margin-left: 0 !important; }
+  [data-testid*="search" i], button[aria-label*="search" i], .search-trigger { display: none !important; }
+`}} />
+
+
+If the cutoff score is changed after the test report is processed, the ATS state of a candidate's test attempt will not change. The change in cutoff score will come into effect only for tests attempted after the change is made.
+
+For example, let's say that the current cutoff score is 50. Candidate A has scored 60 on the test and has been marked as "Qualified". If you change the cutoff score now to 70, then this will not affect the status of candidate A. Candidate A will still be marked as "Qualified". However, if candidate B now attempts the test and gets a score of 60, they will be marked as "Failed".
+
+You can set the cut-off score for a Test under the Test Score Settings page. Refer to the [📄 Modifying Score Settings for Tests](https://app.notion.com/docs/3147b674-5cbb-4bde-9528-7699bb64b1a7/articles/75e1fac0-c6fd-4146-97f1-ea0ad5818a69)topic for more information.
+
+In the **Candidates** tab of a Test, you can use the options in the left pane to filter and view the **Qualified** and **Failed** candidates list separately.
+
+**Example:** Consider a Test with a cut-off score of **75** points. The **Candidates** tab lists all the Test candidates and their statuses. Once the candidates submit their Test, they are automatically marked as **Passed** or **Failed** based on the specified cut-off score of **75** points.
+
+<Frame>
+  <img src="/images/what-happens-to-candidate-statuses-if-the-cutoff-score-is-altered/5ca111d764812532.png" alt="image" />
+</Frame>
+
+**To view a list of Qualified Candidates:**
+
+In the left pane, under the **Candidate Status** category, select **Completed** and the **Passed** option.
+
+<Frame>
+  <img src="/images/what-happens-to-candidate-statuses-if-the-cutoff-score-is-altered/6d5c0444c659ee3a.png" alt="image" />
+</Frame>
+
+**To view a list of Failed Candidates:**
+
+In the left pane, under the **Candidate Status** category, select **Completed** and the **Failed** option.
+
+<Frame>
+  <img src="/images/what-happens-to-candidate-statuses-if-the-cutoff-score-is-altered/eb6805df3942d471.png" alt="image" />
+</Frame>

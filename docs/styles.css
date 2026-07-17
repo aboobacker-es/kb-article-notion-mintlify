@@ -1,0 +1,25 @@
+/* AI-first documentation — no left navigation, no search bar. */
+/* Users navigate exclusively through the AI chatbot and its citations. */
+
+/* Hide the left sidebar/navigation everywhere (belt-and-braces on top of mode:custom). */
+#sidebar,
+nav[aria-label="Pages"] {
+  display: none !important;
+}
+
+/* Reclaim the horizontal space the sidebar used to occupy. */
+main,
+.docs-content,
+[class*="lg:pl-72"] {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  max-width: 100% !important;
+}
+
+/* Hide the top search bar — the AI chat replaces search. */
+[data-testid*="search" i],
+button[aria-label*="search" i],
+.search-trigger,
+input[type="search"] {
+  display: none !important;
+}
